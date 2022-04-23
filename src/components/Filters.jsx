@@ -114,33 +114,6 @@ const Filters = () => {
    const categoryItemArr = addCategoryItem();
    const genreItemArr = addGenreItem();
 
-   // const addSortItem = (arr, className, set, setFilter) => {
-   //    const newLi = arr.map(({ label, id, name }) => {
-   //       return (
-   //          <li
-   //             key={id}
-   //             className={`${className}-item filters__item`}
-   //             onClick={() => {
-   //                dispatch(setFilter(name))
-   //                dispatch(setFilterSort(activeFilterSort, activeFilterCategory, request, filterView));
-   //                set(label);
-   //             }}
-   //          >
-   //             <span>{label}</span>
-   //          </li>
-   //       )
-   //    })
-
-   //    return (
-   //       <ul className={`${className}-list filters__list`}>
-   //          {newLi}
-   //       </ul>
-   //    )
-   // }
-
-   // const visibleSort = addSortItem(sortArr, 'filters__sort', setActiveSort, setActiveFilterSort);
-   // const visibleCategory = addSortItem(categoryArr, 'filters__category', setActiveCategory, setActiveFilterCategory);
-   // const visibleGenreOfficial = addSortItem(filterGenre, 'filters__genre', setActiveFilterGenre, setActiveGenre);
    return (
       <>
          <div className="tabs">

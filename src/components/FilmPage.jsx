@@ -26,7 +26,7 @@ const FilmPage = () => {
                   Оценка: {grade}
                </div>
                <div className="film__genre-user">
-                  Пользовательский жанр: {genreUser}
+                  Пользовательский жанр: {genreUser.label}
                </div>
                <div className="film__publicate">
                   Добавлено: {datePublication}
@@ -43,7 +43,7 @@ const FilmPage = () => {
                   {descriptionOfficial}
                </div>
                <div className="film__genre-off">
-                  Жанр: {genreOfficial}
+                  Жанр: {genreOfficial.join(', ')}
                </div>
                <div className="film__rating">
                   Официальный рейтинг: {rating}

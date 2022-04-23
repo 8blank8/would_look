@@ -50,8 +50,6 @@ export const setFilterSort = (filterSort, filterCategory, filterGenre, request, 
             }
          })
 
-         console.log(filterSort, filterCategory)
-
          dispatch(setFilterFilms(films));
       });
 

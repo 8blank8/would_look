@@ -11,7 +11,7 @@ const AddFilmForm = () => {
    const [optionDescr, setOptionDesc] = useState('');
    const [gradeActive, setGradeActive] = useState(1);
    const [categoryActive, setCategoryActive] = useState('movie');
-   const [genreActive, setGenreActive] = useState('comedy');
+   const [genreActive, setGenreActive] = useState({ name: 'comedy', label: 'Комедия' });
    const [apiFilm, setApiFilm] = useState();
    const [apiFilmsArr, setApiFilmsArr] = useState([]);
    const [changeTitleFilm, setChangeTitleFilm] = useState('');
@@ -77,8 +77,8 @@ const AddFilmForm = () => {
             <li
                key={id}
                value={name}
-               className={`form__category-genre form__button ${genreActive === name ? 'active__button' : null}`}
-               onClick={() => setGenreActive(name)}>
+               className={`form__category-genre form__button ${genreActive.name === name ? 'active__button' : null}`}
+               onClick={() => setGenreActive({ name, label })}>
                {label}
             </li>
          )
@@ -92,8 +92,8 @@ const AddFilmForm = () => {
       setTitleFilm('');
       setOptionDesc('');
       setGradeActive(1);
-      setCategoryActive(0);
-      setGenreActive(0);
+      setCategoryActive('movie');
+      setGenreActive({ name: 'comedy', label: 'Комедия' });
       setApiFilmsArr([]);
    }
 
