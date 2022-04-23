@@ -16,7 +16,7 @@ const FilmsView = () => {
    const view = useSelector(({ filmReducer }) => filmReducer.view);
    const dispatch = useDispatch();
    useEffect(() => {
-      dispatch(setFilterSort(activeFilterSort, activeFilterCategory, activeFilterGenre, request, view));
+      dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, activeFilterGenre.name, request, view));
    }, [])
 
    const setVisibleContent = (arr) => {

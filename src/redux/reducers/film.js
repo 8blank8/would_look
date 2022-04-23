@@ -5,8 +5,8 @@ const initialState = {
    filmPageItem: [],
    view: 'view',
    activeFilterSort: 'downrating',
-   activeFilterCategory: 'all',
-   activeFilterGenre: 'all'
+   activeFilterCategory: { name: 'all', label: 'Все' },
+   activeFilterGenre: { name: 'all', label: 'Все' }
 }
 
 const filmReducer = (state = initialState, action) => {

@@ -1,12 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-   setFilmView,
-   setFilterSort,
-   setActiveFilterSort,
-   setActiveFilterCategory,
-   setActiveFilterGenre
-} from '../redux/actions/filters';
+import { setFilmView, setFilterSort, setActiveFilterSort, setActiveFilterCategory, setActiveFilterGenre } from '../redux/actions/filters';
 
 import { useHttp } from '../hooks/useHttp';
 
@@ -27,30 +21,17 @@ const Filters = () => {
       { label: "убавлению оценки", name: "downgrade" }
    ]);
 
-   const [categoryArr, setCategoryArr] = useState([
-      { "id": 5, "label": "Все", "name": "all" },
-      { "id": 0, "label": "Сериал", "name": "series" },
-      { "id": 1, "label": "Фильм", "name": "movie" },
-      { "id": 2, "label": "Мультсериал", "name": "animated-series" },
-      { "id": 3, "label": "Мультфильм", "name": "cartoon" },
-      { "id": 4, "label": "Аниме", "name": "anime" }
-   ]);
+   const [categoryArr, setCategoryArr] = useState([{ "id": 5, "label": "Все", "name": "all" }]);
+   const [genreArr, setGenreArr] = useState([{ "id": 8, "label": "Все", "name": "all" }]);
 
-   const [genreArr, setGenreArr] = useState([
-      { "id": 8, "label": "Все", "name": "all" },
-      { "id": 0, "label": "Комедия", "name": "comedy" },
-      { "id": 1, "label": "Ужасы", "name": "horror" },
-      { "id": 2, "label": "Фантастика", "name": "fantastic" },
-      { "id": 3, "label": "Семейный", "name": "family" },
-      { "id": 4, "label": "Фентези", "name": "fantasy" },
-      { "id": 5, "label": "Приключения", "name": "adventures" },
-      { "id": 6, "label": "Триллер", "name": "triller" },
-      { "id": 7, "label": "Драма", "name": "drama" }
-   ]);
+   useEffect(() => {
+      request('http://localhost:3001/categoties')
+         .then(data => setCategoryArr([...categoryArr, ...data]));
+      request('http://localhost:3001/genres')
+         .then(data => setGenreArr([...genreArr, ...data]));
+   }, []);
 
    const [activeSort, setActiveSort] = useState(sortArr[1].label);
-   const [activeCategory, setActiveCategory] = useState(categoryArr[0].label);
-   const [activeGenre, setActiveGenre] = useState(genreArr[0].label);
 
    const [sortTab, setSortTab] = useState(false);
    const [categoryTab, setCategoryTab] = useState(false);
@@ -64,7 +45,7 @@ const Filters = () => {
                className={'filters__sort-item filters__item'}
                onClick={() => {
                   dispatch(setActiveFilterSort(name));
-                  dispatch(setFilterSort(name, activeFilterCategory, activeFilterGenre, request, filterView));
+                  dispatch(setFilterSort(name, activeFilterCategory.name, activeFilterGenre.name, request, filterView));
                   setActiveSort(label);
                }}
             >
@@ -81,9 +62,8 @@ const Filters = () => {
                key={id}
                className={'filters__category-item filters__item'}
                onClick={() => {
-                  dispatch(setActiveFilterCategory(name));
-                  dispatch(setFilterSort(activeFilterSort, name, activeFilterGenre, request, filterView));
-                  setActiveCategory(label);
+                  dispatch(setActiveFilterCategory({ name, label }));
+                  dispatch(setFilterSort(activeFilterSort, name, activeFilterGenre.name, request, filterView));
                }}
             >
                <span>{label}</span>
@@ -99,9 +79,8 @@ const Filters = () => {
                key={id}
                className={'filters__genre-item filters__item'}
                onClick={() => {
-                  dispatch(setActiveFilterGenre(name));
-                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory, name, request, filterView));
-                  setActiveGenre(label);
+                  dispatch(setActiveFilterGenre({ name, label }));
+                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, name, request, filterView));
                }}
             >
                <span>{label}</span>
@@ -148,7 +127,7 @@ const Filters = () => {
                <p>
                   Категория
                   <span onClick={() => setCategoryTab(!categoryTab)}>
-                     {activeCategory}
+                     {activeFilterCategory.label}
                   </span>
                </p>
                <ul className='filters__category-list filters__list'>
@@ -159,7 +138,7 @@ const Filters = () => {
                <p>
                   Жанр
                   <span onClick={() => setGenreTab(!genreTab)}>
-                     {activeGenre}
+                     {activeFilterGenre.label}
                   </span>
                </p>
                <ul className='filters__genre-list filters__list'>
