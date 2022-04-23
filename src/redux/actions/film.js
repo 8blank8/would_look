@@ -5,3 +5,10 @@ export const setFilmPageItem = (id) => {
       payload: id
    }
 }
+
+export const deletedFilm = (id) => {
+   return {
+      type: 'DELETED_FILM',
+      payload: id
+   }
+}

@@ -43,7 +43,7 @@ export const setFilterSort = (filterSort, filterCategory, filterGenre, request, 
          });
 
          films = films.filter(item => {
-            if (item.genreUser === filterGenre) {
+            if (item.genreUser.name === filterGenre) {
                return item;
             } else if (filterGenre === 'all') {
                return item;

@@ -1,8 +1,11 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deletedFilm } from '../redux/actions/film';
+import { useHttp } from '../hooks/useHttp';
 
 const FilmPage = () => {
    const filmPageItem = useSelector(state => state.filmReducer.filmPageItem);
    const {
+      id,
       title,
       descriptionOfficial,
       posterUrl,
@@ -14,6 +17,14 @@ const FilmPage = () => {
       datePublication,
       descriptioUser
    } = filmPageItem[0];
+
+   const request = useHttp();
+   const dispatch = useDispatch();
+
+   const onDeletedFilm = (id) => {
+      request(`http://localhost:3001/films-view/${id}`, 'DELETE')
+         .then(dispatch(deletedFilm(id)));
+   }
 
    return (
       <div className="film">
@@ -63,7 +74,9 @@ const FilmPage = () => {
             <div className="film__button">
                Переместить в просмотренное
             </div>
-            <div className="film__button">
+            <div
+               className="film__button"
+               onClick={() => onDeletedFilm(id)}>
                удалить
             </div>
          </div>

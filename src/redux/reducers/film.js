@@ -48,6 +48,11 @@ const filmReducer = (state = initialState, action) => {
             ...state,
             activeFilterGenre: action.payload
          }
+      case 'DELETED_FILM':
+         return {
+            ...state,
+            films: state.films.filter(item => item.id !== action.payload)
+         }
 
       default: return state;
    }
