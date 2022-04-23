@@ -12,10 +12,11 @@ const FilmsView = () => {
    const filterFilms = useSelector(state => state.filmReducer.filterFilms);
    const activeFilterSort = useSelector(({ filmReducer }) => filmReducer.activeFilterSort);
    const activeFilterCategory = useSelector(({ filmReducer }) => filmReducer.activeFilterCategory);
+   const activeFilterGenre = useSelector(({ filmReducer }) => filmReducer.activeFilterGenre);
    const view = useSelector(({ filmReducer }) => filmReducer.view);
    const dispatch = useDispatch();
    useEffect(() => {
-      dispatch(setFilterSort(activeFilterSort, activeFilterCategory, request, view));
+      dispatch(setFilterSort(activeFilterSort, activeFilterCategory, activeFilterGenre, request, view));
    }, [])
 
    const setVisibleContent = (arr) => {

@@ -4,7 +4,8 @@ import {
    setFilmView,
    setFilterSort,
    setActiveFilterSort,
-   setActiveFilterCategory
+   setActiveFilterCategory,
+   setActiveFilterGenre
 } from '../redux/actions/filters';
 
 import { useHttp } from '../hooks/useHttp';
@@ -14,10 +15,10 @@ const Filters = () => {
    const dispatch = useDispatch();
    const request = useHttp();
 
-   const filterFilms = useSelector(({ filmReducer }) => filmReducer.filterFilms);
    const filterView = useSelector(state => state.filmReducer.view);
    const activeFilterSort = useSelector(({ filmReducer }) => filmReducer.activeFilterSort);
    const activeFilterCategory = useSelector(({ filmReducer }) => filmReducer.activeFilterCategory);
+   const activeFilterGenre = useSelector(({ filmReducer }) => filmReducer.activeFilterGenre);
 
    const [sortArr, setSortArr] = useState([
       { label: "увеличению рейтинга", name: "uprating" },
@@ -27,6 +28,7 @@ const Filters = () => {
    ]);
 
    const [categoryArr, setCategoryArr] = useState([
+      { "id": 5, "label": "Все", "name": "all" },
       { "id": 0, "label": "Сериал", "name": "series" },
       { "id": 1, "label": "Фильм", "name": "movie" },
       { "id": 2, "label": "Мультсериал", "name": "animated-series" },
@@ -34,9 +36,21 @@ const Filters = () => {
       { "id": 4, "label": "Аниме", "name": "anime" }
    ]);
 
+   const [genreArr, setGenreArr] = useState([
+      { "id": 8, "label": "Все", "name": "all" },
+      { "id": 0, "label": "Комедия", "name": "comedy" },
+      { "id": 1, "label": "Ужасы", "name": "horror" },
+      { "id": 2, "label": "Фантастика", "name": "fantastic" },
+      { "id": 3, "label": "Семейный", "name": "family" },
+      { "id": 4, "label": "Фентези", "name": "fantasy" },
+      { "id": 5, "label": "Приключения", "name": "adventures" },
+      { "id": 6, "label": "Триллер", "name": "triller" },
+      { "id": 7, "label": "Драма", "name": "drama" }
+   ]);
+
    const [activeSort, setActiveSort] = useState(sortArr[1].label);
-   const [activeCategory, setActiveCategory] = useState(categoryArr[1].label);
-   // const [activeGenre, setActiveGenre] = useState('');
+   const [activeCategory, setActiveCategory] = useState(categoryArr[0].label);
+   const [activeGenre, setActiveGenre] = useState(genreArr[0].label);
 
    const [sortTab, setSortTab] = useState(false);
    const [categoryTab, setCategoryTab] = useState(false);
@@ -50,7 +64,7 @@ const Filters = () => {
                className={'filters__sort-item filters__item'}
                onClick={() => {
                   dispatch(setActiveFilterSort(name));
-                  dispatch(setFilterSort(name, activeFilterCategory, request, filterView));
+                  dispatch(setFilterSort(name, activeFilterCategory, activeFilterGenre, request, filterView));
                   setActiveSort(label);
                }}
             >
@@ -68,8 +82,26 @@ const Filters = () => {
                className={'filters__category-item filters__item'}
                onClick={() => {
                   dispatch(setActiveFilterCategory(name));
-                  dispatch(setFilterSort(activeFilterSort, name, request, filterView));
+                  dispatch(setFilterSort(activeFilterSort, name, activeFilterGenre, request, filterView));
                   setActiveCategory(label);
+               }}
+            >
+               <span>{label}</span>
+            </li >
+         )
+      });
+   }
+
+   const addGenreItem = () => {
+      return genreArr.map(({ id, name, label }) => {
+         return (
+            <li
+               key={id}
+               className={'filters__genre-item filters__item'}
+               onClick={() => {
+                  dispatch(setActiveFilterGenre(name));
+                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory, name, request, filterView));
+                  setActiveGenre(label);
                }}
             >
                <span>{label}</span>
@@ -80,6 +112,7 @@ const Filters = () => {
 
    const sortItemArr = addSortItem();
    const categoryItemArr = addCategoryItem();
+   const genreItemArr = addGenreItem();
 
    // const addSortItem = (arr, className, set, setFilter) => {
    //    const newLi = arr.map(({ label, id, name }) => {
@@ -153,14 +186,12 @@ const Filters = () => {
                <p>
                   Жанр
                   <span onClick={() => setGenreTab(!genreTab)}>
-                     {/* {activeGenre} */}
+                     {activeGenre}
                   </span>
                </p>
-               {genreTab ? <div className="filters__block">
-                  <div className='filters__genre-list filters__list'>
-                     {/* {visibleGenreOfficial} */}
-                  </div>
-               </div> : null}
+               <ul className='filters__genre-list filters__list'>
+                  {genreTab ? genreItemArr : null}
+               </ul>
             </div>
          </div>
       </>

@@ -12,7 +12,7 @@ export const setFilms = (films) => {
    }
 }
 
-export const setFilterSort = (filterSort, filterCategory, request, view) => (dispatch) => {
+export const setFilterSort = (filterSort, filterCategory, filterGenre, request, view) => (dispatch) => {
 
    request('http://localhost:3001/films-view')
       .then(data => {
@@ -34,7 +34,21 @@ export const setFilterSort = (filterSort, filterCategory, request, view) => (dis
             default: return films;
          }
 
-         films = films.filter(item => item.category === filterCategory);
+         films = films.filter(item => {
+            if (item.category === filterCategory) {
+               return item;
+            } else if (filterCategory === 'all') {
+               return item;
+            }
+         });
+
+         films = films.filter(item => {
+            if (item.genreUser === filterGenre) {
+               return item;
+            } else if (filterGenre === 'all') {
+               return item;
+            }
+         })
 
          console.log(filterSort, filterCategory)
 
