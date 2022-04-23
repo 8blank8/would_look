@@ -1,0 +1,43 @@
+.list {
+   width: 544px;
+   background-color: #0C0C0C;
+
+   &__item {
+      border-bottom: 2px solid #222222;
+      display: flex;
+      padding: 25px 25px 37px 25px;
+      justify-content: space-between;
+      cursor: pointer;
+      &:hover{
+         background-color: #2e2e2e;
+      }
+   }
+
+   &__image {
+      & img{
+         height: 75px;
+         width: 56px;
+      }
+   }
+
+   &__wrapper {
+      width: 398px;
+   }
+
+   &__title {
+      font-size: 20px;
+   }
+
+   &__body {
+      padding: 20px 0px 0px 0px;
+      display: flex;
+      font-size: 14px;
+      justify-content: space-between;
+   }
+
+   &__rating {
+   }
+
+   &__realese {
+   }
+}

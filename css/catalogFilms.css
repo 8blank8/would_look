@@ -1,0 +1,159 @@
+.content {
+  padding: 80px 0px 0px 0px;
+}
+
+.tabs {
+  max-width: 302px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tabs__tab {
+  font-size: 20px;
+  color: #2F2F2F;
+  cursor: pointer;
+}
+
+.tab__active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.filters {
+  padding: 29px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+}
+
+.filters p {
+  margin: 0px 50px 0px 0px;
+}
+
+.filters p span {
+  cursor: pointer;
+  color: #2F2F2F;
+  padding: 0px 0px 0px 10px;
+}
+
+.filters p span::after {
+  margin: 0px 0px 0px 10px;
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  border: 6px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+.filters__sort {
+  position: relative;
+}
+
+.filters__sort-list {
+  width: 220px;
+  position: absolute;
+  top: 28px;
+  right: 50px;
+}
+
+.filters__list {
+  background-color: #0C0C0C;
+  font-size: 20px;
+}
+
+.filters__item span {
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 1px solid #222222;
+  display: block;
+  width: 210px;
+  margin: 0px auto;
+  padding: 15px 0px 10px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.filters__category {
+  position: relative;
+}
+
+.filters__category-list {
+  width: 220px;
+  position: absolute;
+  right: 40px;
+  top: 28px;
+}
+
+.filters__genre {
+  position: relative;
+}
+
+.filters__block {
+  width: 423px;
+  position: absolute;
+  left: 0;
+  top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filters__genre-list {
+  font-size: 18px;
+  color: #2F2F2F;
+  text-align: center;
+  width: 220px;
+}
+
+.filters__genre-item {
+  text-align: left;
+  font-size: 20px;
+}
+
+.catalog__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.film {
+  max-width: 223px;
+  width: 100%;
+  margin: 60px 80px 0px 0px;
+}
+
+.film:nth-child(4n) {
+  margin: 60px 0 0 0;
+}
+
+.film__img img {
+  width: 223px;
+  height: 298px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.film__body {
+  padding: 15px 0px 25px 21px;
+  border-left: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  border-right: 1px solid #222222;
+}
+
+.film__title {
+  font-size: 20px;
+}
+
+.film__rating {
+  padding: 5 px 0px 0px 0px;
+  font-size: 16px;
+}

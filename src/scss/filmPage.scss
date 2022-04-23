@@ -1,0 +1,85 @@
+.film {
+   font-size: 20px;
+   cursor: pointer;
+   & a {
+      text-decoration: none;
+      color: #fff;
+   }
+   &__block {
+      display:flex;
+      max-width: 1140px;
+      width: 100%;
+      justify-content: space-between;
+   }
+
+   &__block-left {
+      flex: 1 0 284px
+   }
+
+   &__img {
+      & img{
+         width: 223px;
+         object-fit: cover;
+         height: 298px;
+      }
+   }
+
+   &__grade {
+      padding: 20px 0px 0px 0px;
+   }
+
+   &__genre-user {
+      padding: 10px 0px 0px 0px;
+   }
+
+   &__publicate {
+      padding: 10px 0px 0px 0px;
+      color: #3E3E3E;
+   }
+
+   &__block-right {
+      flex: 1 0 840px;
+   }
+
+   &__title { 
+      font-size: 20px;
+
+   }
+
+   &__description-off {
+      padding: 40px 0px 0px 0px;
+      line-height: 20px;
+   }
+
+   &__genre-off {
+      padding: 40px 0px 0px 0px;
+   }
+
+   &__rating {
+      padding: 10px 0px 0px 0px;
+   }
+
+   &__date {
+      padding: 10px 0px 0px 0px;
+   }
+
+   &__description-user {
+      padding: 40px 0px 0px 0px;
+      width: 1125px;
+      line-height: 20px;
+      & div{
+         padding: 0px 0px 10px 0px;
+      }
+   }
+
+   &__buttons {
+      padding: 94px 0px 0px 0px;
+      display: flex;
+      justify-content: space-between;
+      width: 1140px;
+   }
+
+   &__button {
+      cursor: pointer;
+   }
+}

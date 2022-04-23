@@ -1,0 +1,41 @@
+.header {
+
+   &__title {
+      color: #1C1C1C;
+      font-size: 163px;
+      font-weight: 900;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      &::after{
+         content: 'would look';
+      color: #181818;
+         display: block;
+         position: absolute;
+         top: 25px;
+         font-size: 163px;
+         font-weight: 900;
+         text-transform: uppercase;
+      }
+   }
+
+   &__buttons {
+      max-width: 940px;
+      margin: 0px auto;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__button {
+      height: 100px;
+      width: 305px;
+      background-color: transparent;
+      font-weight: 300;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      text-transform: uppercase;
+      cursor: pointer;
+   }
+}
+
