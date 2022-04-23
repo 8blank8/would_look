@@ -7,7 +7,7 @@ const Film = ({ id, title, grade, posterUrl }) => {
    const dispatch = useDispatch();
 
    return (
-      <div className="film" onClick={() => dispatch(setFilmPageItem(id))}>
+      <div className="film film_cursor" onClick={() => dispatch(setFilmPageItem(id))}>
          <Link to={`/catalog/view/${id}`}>
             <div className="film__img">
                <img src={posterUrl} alt={title} />

@@ -374,6 +374,51 @@
       "dateRelease": "1999",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/435.jpg",
       "view": "view"
+    },
+    {
+      "id": "5b6b3d7e-902d-4aef-8535-6dbe60dfac9a",
+      "title": "Мир Дикого Запада",
+      "descriptioUser": "аяывапфвпрвр",
+      "descriptionOfficial": "В футуристическом парке развлечений «Мир Дикого Запада» специально сконструированные андроиды выполняют любые прихоти посетителей, чтобы те чувствовали безнаказанность и полную свободу действий. Если робота убили - не беда, техники его починят, сотрут память и снова поставят в строй, навстречу новому дню и новым людским прихотям. Но оказывается, что далеко не все роботы теряют воспоминания.",
+      "grade": 4,
+      "rating": "8.0",
+      "genreOfficial": [
+        "детектив",
+        "драма",
+        "фантастика"
+      ],
+      "genreUser": {
+        "name": "fantastic",
+        "label": "Фантастика"
+      },
+      "category": "series",
+      "datePublication": "11.12.22",
+      "dateRelease": "2016",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/195523.jpg",
+      "view": "view"
+    },
+    {
+      "id": "8aee34b1-a89e-460b-87bf-00e423b17133",
+      "title": "Разделение",
+      "descriptioUser": "вапвар",
+      "descriptionOfficial": "Руководство компании Lumon Industries придумало новый способ контролировать повседневную деятельность своих сотрудников — «процедуру разделения», отделяющую рабочие воспоминания от обычных. Марк соглашается на процедуру, но вскоре начинает сомневаться в правильности своего выбора.",
+      "grade": 2,
+      "rating": "8.2",
+      "genreOfficial": [
+        "детектив",
+        "драма",
+        "триллер",
+        "фантастика"
+      ],
+      "genreUser": {
+        "name": "fantastic",
+        "label": "Фантастика"
+      },
+      "category": "series",
+      "datePublication": "11.12.22",
+      "dateRelease": "2022",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1343318.jpg",
+      "view": "look"
     }
   ],
   "genres": [
