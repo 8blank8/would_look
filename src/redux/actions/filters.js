@@ -23,13 +23,13 @@ export const setFilterSort = (filterSort, filterCategory, request, view) => (dis
                films.sort((a, b) => (+a.rating > +b.rating) ? -1 : 1);
                break;
             case 'uprating':
-               dispatch(setFilterFilms(JSON.parse(JSON.stringify(films)).sort((a, b) => (+a.rating < +b.rating) ? -1 : 1)));
+               films.sort((a, b) => (+a.rating < +b.rating) ? -1 : 1);
                break;
             case 'upgrade':
-               dispatch(setFilterFilms(JSON.parse(JSON.stringify(films)).sort((a, b) => (+a.grade < +b.grade) ? -1 : 1)));
+               films.sort((a, b) => (+a.grade < +b.grade) ? -1 : 1);
                break;
             case 'downgrade':
-               dispatch(setFilterFilms(JSON.parse(JSON.stringify(films)).sort((a, b) => (+a.grade > +b.grade) ? -1 : 1)));
+               films.sort((a, b) => (+a.grade > +b.grade) ? -1 : 1);
                break;
             default: return films;
          }

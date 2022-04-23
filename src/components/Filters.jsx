@@ -42,33 +42,71 @@ const Filters = () => {
    const [categoryTab, setCategoryTab] = useState(false);
    const [genreTab, setGenreTab] = useState(false);
 
-
-   const addSortItem = (arr, className, set, setFilter) => {
-      const newLi = arr.map(({ label, id, name }) => {
+   const addSortItem = () => {
+      return sortArr.map(({ id, label, name }) => {
          return (
             <li
                key={id}
-               className={`${className}-item filters__item`}
+               className={'filters__sort-item filters__item'}
                onClick={() => {
-                  dispatch(setFilter(name))
-                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory, request, filterView));
-                  set(label);
+                  dispatch(setActiveFilterSort(name));
+                  dispatch(setFilterSort(name, activeFilterCategory, request, filterView));
+                  setActiveSort(label);
                }}
             >
                <span>{label}</span>
-            </li>
+            </li >
          )
-      })
-
-      return (
-         <ul className={`${className}-list filters__list`}>
-            {newLi}
-         </ul>
-      )
+      });
    }
 
-   const visibleSort = addSortItem(sortArr, 'filters__sort', setActiveSort, setActiveFilterSort);
-   const visibleCategory = addSortItem(categoryArr, 'filters__category', setActiveCategory, setActiveFilterCategory);
+   const addCategoryItem = () => {
+      return categoryArr.map(({ id, name, label }) => {
+         return (
+            <li
+               key={id}
+               className={'filters__category-item filters__item'}
+               onClick={() => {
+                  dispatch(setActiveFilterCategory(name));
+                  dispatch(setFilterSort(activeFilterSort, name, request, filterView));
+                  setActiveCategory(label);
+               }}
+            >
+               <span>{label}</span>
+            </li >
+         )
+      });
+   }
+
+   const sortItemArr = addSortItem();
+   const categoryItemArr = addCategoryItem();
+
+   // const addSortItem = (arr, className, set, setFilter) => {
+   //    const newLi = arr.map(({ label, id, name }) => {
+   //       return (
+   //          <li
+   //             key={id}
+   //             className={`${className}-item filters__item`}
+   //             onClick={() => {
+   //                dispatch(setFilter(name))
+   //                dispatch(setFilterSort(activeFilterSort, activeFilterCategory, request, filterView));
+   //                set(label);
+   //             }}
+   //          >
+   //             <span>{label}</span>
+   //          </li>
+   //       )
+   //    })
+
+   //    return (
+   //       <ul className={`${className}-list filters__list`}>
+   //          {newLi}
+   //       </ul>
+   //    )
+   // }
+
+   // const visibleSort = addSortItem(sortArr, 'filters__sort', setActiveSort, setActiveFilterSort);
+   // const visibleCategory = addSortItem(categoryArr, 'filters__category', setActiveCategory, setActiveFilterCategory);
    // const visibleGenreOfficial = addSortItem(filterGenre, 'filters__genre', setActiveFilterGenre, setActiveGenre);
    return (
       <>
@@ -96,7 +134,9 @@ const Filters = () => {
                      {activeSort}
                   </span>
                </p>
-               {sortTab ? visibleSort : null}
+               <ul className='filters__sort-list filters__list'>
+                  {sortTab ? sortItemArr : null}
+               </ul>
             </div>
             <div className="filters__category">
                <p>
@@ -105,7 +145,9 @@ const Filters = () => {
                      {activeCategory}
                   </span>
                </p>
-               {categoryTab ? visibleCategory : null}
+               <ul className='filters__category-list filters__list'>
+                  {categoryTab ? categoryItemArr : null}
+               </ul>
             </div>
             <div className="filters__genre">
                <p>
