@@ -19,7 +19,7 @@ const FilmsView = () => {
       request('http://localhost:3001/films-view')
          .then(data => {
             dispatch(setFilms(data));
-            dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, activeFilterGenre.name, view, data));
+            dispatch(setFilterSort(activeFilterSort.name, activeFilterCategory.name, activeFilterGenre.name, view, data));
          });
    }, [])
 

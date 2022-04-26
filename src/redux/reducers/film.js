@@ -4,7 +4,7 @@ const initialState = {
    filterFilms: [],
    filmPageItem: [],
    view: 'view',
-   activeFilterSort: 'downrating',
+   activeFilterSort: { name: 'downrating', label: 'убавлению рейтинга' },
    activeFilterCategory: { name: 'all', label: 'Все' },
    activeFilterGenre: { name: 'all', label: 'Все' }
 }
