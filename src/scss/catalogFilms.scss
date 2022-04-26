@@ -86,7 +86,7 @@
 		&__category-list {
          width: 220px;
          position: absolute;
-         right: 40px;
+         right: 15px;
          top: 28px;
 		}
 
@@ -106,6 +106,8 @@
 		}
 
 		&__genre-list {
+         position: absolute;
+         top: 28px;
          font-size: 18px;
          color: #2F2F2F;
          text-align: center;
