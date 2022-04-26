@@ -9,6 +9,7 @@ const Filters = () => {
    const dispatch = useDispatch();
    const request = useHttp();
 
+   const films = useSelector(({ filmReducer }) => filmReducer.films);
    const filterView = useSelector(state => state.filmReducer.view);
    const activeFilterSort = useSelector(({ filmReducer }) => filmReducer.activeFilterSort);
    const activeFilterCategory = useSelector(({ filmReducer }) => filmReducer.activeFilterCategory);
@@ -45,7 +46,7 @@ const Filters = () => {
                className={'filters__sort-item filters__item'}
                onClick={() => {
                   dispatch(setActiveFilterSort(name));
-                  dispatch(setFilterSort(name, activeFilterCategory.name, activeFilterGenre.name, request, filterView));
+                  dispatch(setFilterSort(name, activeFilterCategory.name, activeFilterGenre.name, filterView, films));
                   setActiveSort(label);
                }}
             >
@@ -63,7 +64,7 @@ const Filters = () => {
                className={'filters__category-item filters__item'}
                onClick={() => {
                   dispatch(setActiveFilterCategory({ name, label }));
-                  dispatch(setFilterSort(activeFilterSort, name, activeFilterGenre.name, request, filterView));
+                  dispatch(setFilterSort(activeFilterSort, name, activeFilterGenre.name, filterView, films));
                }}
             >
                <span>{label}</span>
@@ -80,7 +81,7 @@ const Filters = () => {
                className={'filters__genre-item filters__item'}
                onClick={() => {
                   dispatch(setActiveFilterGenre({ name, label }));
-                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, name, request, filterView));
+                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, name, filterView, films));
                }}
             >
                <span>{label}</span>
@@ -100,6 +101,7 @@ const Filters = () => {
                className={`tabs__tab ${filterView === 'view' ? 'tab__active' : null}`}
                onClick={() => {
                   dispatch(setFilmView('view'));
+                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, activeFilterGenre.name, 'view', films));
                }}>
                Просмотрено
             </div>
@@ -107,6 +109,7 @@ const Filters = () => {
                className={`tabs__tab ${filterView === 'look' ? 'tab__active' : null}`}
                onClick={() => {
                   dispatch(setFilmView('look'));
+                  dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, activeFilterGenre.name, 'look', films));
                }}>
                Посмотреть
             </div>

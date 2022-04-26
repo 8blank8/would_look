@@ -1,7 +1,7 @@
 import { useHttp } from '../hooks/useHttp';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setFilterSort } from '../redux/actions/filters';
+import { setFilterSort, setFilms } from '../redux/actions/filters';
 
 import { Film } from './index';
 
@@ -16,7 +16,11 @@ const FilmsView = () => {
    const dispatch = useDispatch();
 
    useEffect(() => {
-      dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, activeFilterGenre.name, request, view));
+      request('http://localhost:3001/films-view')
+         .then(data => {
+            dispatch(setFilms(data));
+            dispatch(setFilterSort(activeFilterSort, activeFilterCategory.name, activeFilterGenre.name, view, data));
+         });
    }, [])
 
    const setVisibleContent = (arr) => {

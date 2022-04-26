@@ -12,47 +12,44 @@ export const setFilms = (films) => {
    }
 }
 
-export const setFilterSort = (filterSort, filterCategory, filterGenre, request, view) => (dispatch) => {
+export const setFilterSort = (filterSort, filterCategory, filterGenre, view, data) => (dispatch) => {
 
-   request('http://localhost:3001/films-view')
-      .then(data => {
-         dispatch(setFilms(data));
-         let films = data.filter(item => item.view === view);
-         switch (filterSort) {
-            case 'downrating':
-               films.sort((a, b) => (+a.rating > +b.rating) ? -1 : 1);
-               break;
-            case 'uprating':
-               films.sort((a, b) => (+a.rating < +b.rating) ? -1 : 1);
-               break;
-            case 'upgrade':
-               films.sort((a, b) => (+a.grade < +b.grade) ? -1 : 1);
-               break;
-            case 'downgrade':
-               films.sort((a, b) => (+a.grade > +b.grade) ? -1 : 1);
-               break;
-            default: return films;
-         }
+   let films = data.filter(item => item.view === view);
 
-         films = films.filter(item => {
-            if (item.category === filterCategory) {
-               return item;
-            } else if (filterCategory === 'all') {
-               return item;
-            }
-         });
+   films = data.filter(item => item.view === view);
+   switch (filterSort) {
+      case 'downrating':
+         films.sort((a, b) => (+a.rating > +b.rating) ? -1 : 1);
+         break;
+      case 'uprating':
+         films.sort((a, b) => (+a.rating < +b.rating) ? -1 : 1);
+         break;
+      case 'upgrade':
+         films.sort((a, b) => (+a.grade < +b.grade) ? -1 : 1);
+         break;
+      case 'downgrade':
+         films.sort((a, b) => (+a.grade > +b.grade) ? -1 : 1);
+         break;
+      default: return films;
+   }
 
-         films = films.filter(item => {
-            if (item.genreUser.name === filterGenre) {
-               return item;
-            } else if (filterGenre === 'all') {
-               return item;
-            }
-         })
+   films = films.filter(item => {
+      if (item.category === filterCategory) {
+         return item;
+      } else if (filterCategory === 'all') {
+         return item;
+      }
+   });
 
-         dispatch(setFilterFilms(films));
-      });
+   films = films.filter(item => {
+      if (item.genreUser.name === filterGenre) {
+         return item;
+      } else if (filterGenre === 'all') {
+         return item;
+      }
+   })
 
+   dispatch(setFilterFilms(films));
 
 }
 

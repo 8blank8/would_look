@@ -14,8 +14,7 @@ const filmReducer = (state = initialState, action) => {
       case 'SET_FILMS':
          return {
             ...state,
-            films: action.payload,
-            filterFilms: action.payload.filter(item => item.view === state.view)
+            films: action.payload
          }
       case 'SET_FILTER_FILMS':
          return {
@@ -25,8 +24,7 @@ const filmReducer = (state = initialState, action) => {
       case 'SET_FILM_VIEW':
          return {
             ...state,
-            view: action.payload,
-            filterFilms: state.films.filter(item => item.view === action.payload)
+            view: action.payload
          }
       case 'SET_FILMPAGE_ITEM':
          return {
