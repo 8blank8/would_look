@@ -1,125 +1,291 @@
 {
-   "films-view": [],
-   "genres": [
-      {
-         "id": 0,
-         "label": "Комедия",
-         "name": "comedy"
-      },
-      {
-         "id": 1,
-         "label": "Ужасы",
-         "name": "horror"
-      },
-      {
-         "id": 2,
-         "label": "Фантастика",
-         "name": "fantastic"
-      },
-      {
-         "id": 3,
-         "label": "Семейный",
-         "name": "family"
-      },
-      {
-         "id": 4,
-         "label": "Фентези",
-         "name": "fantasy"
-      },
-      {
-         "id": 5,
-         "label": "Приключения",
-         "name": "adventures"
-      },
-      {
-         "id": 6,
-         "label": "Триллер",
-         "name": "triller"
-      },
-      {
-         "id": 7,
-         "label": "Драма",
-         "name": "drama"
-      }
-   ],
-   "categoties": [
-      {
-         "id": 0,
-         "label": "Сериал",
-         "name": "series"
-      },
-      {
-         "id": 1,
-         "label": "Фильм",
-         "name": "movie"
-      },
-      {
-         "id": 2,
-         "label": "Мультсериал",
-         "name": "animated-series"
-      },
-      {
-         "id": 3,
-         "label": "Мультфильм",
-         "name": "cartoon"
-      },
-      {
-         "id": 4,
-         "label": "Аниме",
-         "name": "anime"
-      }
-   ],
-   "filters": {
-      "sort": [
-         {
-            "id": 0,
-            "label": "увеличению рейтинга",
-            "name": "uprating"
-         },
-         {
-            "id": 1,
-            "label": "убавлению рейтинга",
-            "name": "downrating"
-         },
-         {
-            "id": 2,
-            "label": "сначала старые",
-            "name": "old"
-         },
-         {
-            "id": 3,
-            "label": "сначала новые",
-            "name": "new"
-         },
-         {
-            "id": 4,
-            "label": "алфавиту",
-            "name": "alfavit"
-         },
-         {
-            "id": 5,
-            "label": "увеличению оценки",
-            "name": "upgrade"
-         },
-         {
-            "id": 6,
-            "label": "убавлению оценки",
-            "name": "downgrade"
-         }
+  "films-view": [
+    {
+      "id": "336905ce-7930-42f3-9c51-3feb27ffb993",
+      "title": "Бесстыжие",
+      "descriptioUser": "",
+      "descriptionOfficial": "О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.",
+      "grade": 8,
+      "rating": "8.7",
+      "genreOfficial": [
+        "драма",
+        "комедия"
       ],
-      "category": [
-         {
-            "id": 0,
-            "label": "фильмы",
-            "name": "films"
-         }
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "series",
+      "datePublication": "11.12.22",
+      "dateRelease": "2011",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
+      "view": "view"
+    },
+    {
+      "id": "9c5044ce-ca2a-4854-af0f-1733b336e3dd",
+      "title": "Кобра Кай",
+      "descriptioUser": "",
+      "descriptionOfficial": "В прошлом хулиган, а ныне разорившийся неудачник, Джонни Лоуренс считает, что единственный его шанс вернуться к нормальной жизни — заново открыть печально известную школу карате «Кобра Кай». Попытка наладить свои дела сводит Джонни с Дэниелом ЛаРуссо — успешным мужчиной, и он изо всех сил старается сохранять жизненную гармонию, которой когда-то учил его мистер Мияги. Встретившись вновь, Дэнни и Джонни пытаются избавиться от груза прошлого и проблем настоящего единственным известным им способом — с помощью карате.",
+      "grade": 7,
+      "rating": "7.9",
+      "genreOfficial": [
+        "боевик",
+        "драма",
+        "комедия",
+        "спорт"
       ],
-      "genre": [
-         {
-            "id": 0,
-            "label": "семейный",
-            "name": "family"
-         }
-      ]
-   }
+      "genreUser": {
+        "name": "family",
+        "label": "Семейный"
+      },
+      "category": "series",
+      "datePublication": "11.12.22",
+      "dateRelease": "2018",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1047617.jpg",
+      "view": "view"
+    },
+    {
+      "id": "b818ed0b-74ea-417c-90c9-2db4faa3a546",
+      "title": "Твоё имя",
+      "descriptioUser": "фаыфыафыафыафыа",
+      "descriptionOfficial": "Токийский парень Таки и провинциальная девушка Мицуха обнаруживают, что между ними существует странная связь. Во сне они меняются телами и проживают жизни друг друга. Но однажды эта способность исчезает так же внезапно, как появилась. Таки решает во что бы то ни стало отыскать Мицуху.",
+      "grade": 8,
+      "rating": "8.4",
+      "genreOfficial": [
+        "аниме",
+        "драма",
+        "мелодрама",
+        "мультфильм",
+        "фэнтези"
+      ],
+      "genreUser": {
+        "name": "family",
+        "label": "Семейный"
+      },
+      "category": "anime",
+      "datePublication": "11.12.22",
+      "dateRelease": "2016",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/958722.jpg",
+      "view": "view"
+    },
+    {
+      "id": "c09f4879-5002-4986-a0a6-6758da730bc5",
+      "title": "Побег из курятника",
+      "descriptioUser": "",
+      "descriptionOfficial": "Курочкам на ферме миссис Туиди приходится нелегко. Для каждой из этих несчастных птиц любое, даже самое погожее утро, может стать последним: в мгновение ока они могут угодить в суп или стать начинкой для пирожка.\n\nБезропотные домашние птички живут в постоянном страхе в ужасных курятниках, напоминающих бараки концлагеря. Все попытки вырваться из страшной фермы на волю оканчиваются провалом. Но однажды на ферме объявляется веселый американский петух Рокки...",
+      "grade": 7,
+      "rating": "6.9",
+      "genreOfficial": [
+        "драма",
+        "комедия",
+        "мультфильм",
+        "приключения",
+        "семейный"
+      ],
+      "genreUser": {
+        "name": "family",
+        "label": "Семейный"
+      },
+      "category": "cartoon",
+      "datePublication": "11.12.22",
+      "dateRelease": "2000",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/635.jpg",
+      "view": "view"
+    },
+    {
+      "id": "b28ace8d-ebb3-4d34-8014-49b631646bff",
+      "title": "Остров проклятых",
+      "descriptioUser": "",
+      "descriptionOfficial": "Два американских судебных пристава отправляются на один из островов в штате Массачусетс, чтобы расследовать исчезновение пациентки клиники для умалишенных преступников. При проведении расследования им придется столкнуться с паутиной лжи, обрушившимся ураганом и смертельным бунтом обитателей клиники.",
+      "grade": 9,
+      "rating": "8.5",
+      "genreOfficial": [
+        "детектив",
+        "драма",
+        "триллер"
+      ],
+      "genreUser": {
+        "name": "drama",
+        "label": "Драма"
+      },
+      "category": "movie",
+      "datePublication": "11.12.22",
+      "dateRelease": "2009",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/397667.jpg",
+      "view": "view"
+    },
+    {
+      "id": "c45815d0-d8d5-46cc-9f65-85f37009b553",
+      "title": "Лекарство от здоровья",
+      "descriptioUser": "",
+      "descriptionOfficial": "Молодой амбициозный сотрудник отправляется в затерянный в швейцарских Альпах оздоровительный центр, чтобы вернуть оттуда руководителя своей компании. Но по прибытии он понимает, что чудодейственные процедуры спа-салона вовсе не те, чем кажутся. В то время как парень начинает распутывать страшные тайны этого места, его здравый ум проходит настоящую проверку на прочность. Похоже, теперь он страдает той же странной болезнью, по причине которой здесь остаются другие гости центра, желающие получить свою дозу лекарства.",
+      "grade": 8,
+      "rating": "6.4",
+      "genreOfficial": [
+        "детектив",
+        "драма",
+        "триллер",
+        "ужасы",
+        "фантастика",
+        "фэнтези"
+      ],
+      "genreUser": {
+        "name": "horror",
+        "label": "Ужасы"
+      },
+      "category": "movie",
+      "datePublication": "11.12.22",
+      "dateRelease": "2017",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/915111.jpg",
+      "view": "view"
+    },
+    {
+      "id": "bf9e008a-6b03-444b-8b32-bfd23128bb9b",
+      "title": "Тетрадь смерти",
+      "descriptioUser": "",
+      "descriptionOfficial": "Старшекласснику Лайту Ягами в руки попадает тетрадь синигами Рюка. Каждый человек, чьё имя записать в эту тетрадку, умрёт, поэтому Лайт решает бороться со злом на земле.",
+      "grade": 1,
+      "rating": "8.6",
+      "genreOfficial": [
+        "аниме",
+        "детектив",
+        "драма",
+        "криминал",
+        "мультфильм",
+        "триллер",
+        "фэнтези"
+      ],
+      "genreUser": {
+        "name": "horror",
+        "label": "Ужасы"
+      },
+      "category": "anime",
+      "datePublication": "11.12.22",
+      "dateRelease": "2006",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/406148.jpg",
+      "view": "view"
+    }
+  ],
+  "genres": [
+    {
+      "id": 0,
+      "label": "Комедия",
+      "name": "comedy"
+    },
+    {
+      "id": 1,
+      "label": "Ужасы",
+      "name": "horror"
+    },
+    {
+      "id": 2,
+      "label": "Фантастика",
+      "name": "fantastic"
+    },
+    {
+      "id": 3,
+      "label": "Семейный",
+      "name": "family"
+    },
+    {
+      "id": 4,
+      "label": "Фентези",
+      "name": "fantasy"
+    },
+    {
+      "id": 5,
+      "label": "Приключения",
+      "name": "adventures"
+    },
+    {
+      "id": 6,
+      "label": "Триллер",
+      "name": "triller"
+    },
+    {
+      "id": 7,
+      "label": "Драма",
+      "name": "drama"
+    }
+  ],
+  "categoties": [
+    {
+      "id": 0,
+      "label": "Сериал",
+      "name": "series"
+    },
+    {
+      "id": 1,
+      "label": "Фильм",
+      "name": "movie"
+    },
+    {
+      "id": 2,
+      "label": "Мультсериал",
+      "name": "animated-series"
+    },
+    {
+      "id": 3,
+      "label": "Мультфильм",
+      "name": "cartoon"
+    },
+    {
+      "id": 4,
+      "label": "Аниме",
+      "name": "anime"
+    }
+  ],
+  "filters": {
+    "sort": [
+      {
+        "id": 0,
+        "label": "увеличению рейтинга",
+        "name": "uprating"
+      },
+      {
+        "id": 1,
+        "label": "убавлению рейтинга",
+        "name": "downrating"
+      },
+      {
+        "id": 2,
+        "label": "сначала старые",
+        "name": "old"
+      },
+      {
+        "id": 3,
+        "label": "сначала новые",
+        "name": "new"
+      },
+      {
+        "id": 4,
+        "label": "алфавиту",
+        "name": "alfavit"
+      },
+      {
+        "id": 5,
+        "label": "увеличению оценки",
+        "name": "upgrade"
+      },
+      {
+        "id": 6,
+        "label": "убавлению оценки",
+        "name": "downgrade"
+      }
+    ],
+    "category": [
+      {
+        "id": 0,
+        "label": "фильмы",
+        "name": "films"
+      }
+    ],
+    "genre": [
+      {
+        "id": 0,
+        "label": "семейный",
+        "name": "family"
+      }
+    ]
+  }
 }

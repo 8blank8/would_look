@@ -1,6 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
 import { deletedFilm } from '../redux/actions/film';
 import { useHttp } from '../hooks/useHttp';
+
 
 const FilmPage = () => {
    const filmPageItem = useSelector(state => state.filmReducer.filmPageItem);
@@ -15,15 +19,52 @@ const FilmPage = () => {
       grade,
       genreUser,
       datePublication,
-      descriptioUser
+      descriptioUser,
+      view
    } = filmPageItem[0];
 
    const request = useHttp();
    const dispatch = useDispatch();
 
+   const [modalOpen, setModalOpen] = useState(false);
+   const [modalContent, setModalContent] = useState('');
+
    const onDeletedFilm = (id) => {
       request(`http://localhost:3001/films-view/${id}`, 'DELETE')
          .then(dispatch(deletedFilm(id)));
+   }
+
+   const onAddView = (id) => {
+      request(`http://localhost:3001/films-view/${id}`, 'PUT', JSON.stringify({ ...filmPageItem[0], view: 'view' }));
+   }
+
+   const onShowModal = (text, func) => {
+      return (
+         <div className="modal">
+            <div className="modal__wrapper">
+               <div className="modal__text">
+                  {`Вы действительно хотите ${text} `}
+               </div>
+               <div className="modal__buttons">
+                  <NavLink to='/catalog/view'>
+                     <div
+                        className="modal__button"
+                        onClick={() => {
+                           setModalOpen(false);
+                           func(id)
+                        }}>
+                        Да
+                     </div>
+                  </NavLink>
+                  <div
+                     className="modal__button"
+                     onClick={() => setModalOpen(false)}>
+                     Нет
+                  </div>
+               </div>
+            </div>
+         </div>
+      )
    }
 
    return (
@@ -51,7 +92,7 @@ const FilmPage = () => {
                   Описание:
                   <br />
                   <br />
-                  {descriptionOfficial}
+                  {descriptionOfficial.length === 0 ? 'Описание отсутствует...' : descriptionOfficial}
                </div>
                <div className="film__genre-off">
                   Жанр: {genreOfficial.join(', ')}
@@ -68,18 +109,27 @@ const FilmPage = () => {
             <div>
                Пользовательское описание:
             </div>
-            {descriptioUser}
+            {descriptioUser.length === 0 ? 'Описание отсутствует...' : descriptioUser}
          </div>
          <div className="film__buttons">
-            <div className="film__button">
+            {view === 'look' ? <div
+               className="film__button"
+               onClick={() => {
+                  setModalOpen(true);
+                  setModalContent(onShowModal(`переместить ${title} в просмотренное?`, onAddView))
+               }}>
                Переместить в просмотренное
-            </div>
+            </div> : <div></div>}
             <div
                className="film__button"
-               onClick={() => onDeletedFilm(id)}>
+               onClick={() => {
+                  setModalOpen(true);
+                  setModalContent(onShowModal(`удалить ${title}?`, onDeletedFilm));
+               }}>
                удалить
             </div>
          </div>
+         {modalOpen && modalContent}
       </div >
    )
 }
