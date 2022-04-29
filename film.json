@@ -63,34 +63,6 @@
       "view": "look"
     },
     {
-      "id": "0bd58834-53e6-4aa0-be5a-243ae28a784a",
-      "title": "Бесстыжие",
-      "descriptioUser": "",
-      "descriptionOfficial": "О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.",
-      "grade": 7,
-      "rating": "8.7",
-      "genreOfficial": [
-        "драма",
-        "комедия"
-      ],
-      "genreUser": {
-        "name": "comedy",
-        "label": "Комедия"
-      },
-      "category": "series",
-      "datePublication": {
-        "date": 29,
-        "mounth": "04",
-        "year": 2022,
-        "minute": 42,
-        "hour": 13,
-        "second": 32
-      },
-      "dateRelease": "2011",
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
-      "view": "look"
-    },
-    {
       "id": "d785bcca-8161-454a-bc55-95961de323da",
       "title": "Халк",
       "descriptioUser": "чмсчсмчсм",
@@ -208,6 +180,36 @@
       },
       "dateRelease": "2006",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/406148.jpg",
+      "view": "view"
+    },
+    {
+      "id": "c8ccc7a2-2a38-471a-a5d6-613f2def69b5",
+      "title": "Флэш",
+      "descriptioUser": "",
+      "descriptionOfficial": "Когда Барри Аллен был маленьким, больше всего на свете ему хотелось быть супергероем – тем, кто превосходит лимиты человеческого организма и использует во благо данную ему силу. Когда Барри было одиннадцать лет, он на собственном опыте узнал, что люди с необычными способностями действительно существуют: его мать была убита одним из таких людей. Повзрослев и став судмедэкспертом, Барри не отбросил мыслей о сверхлюдях и продолжал искать доказательства их существования, что не лучшим образом сказывалось на его репутации и общении с коллегами. Впрочем, однажды его усилия были вознаграждены...",
+      "grade": 7,
+      "rating": "7.5",
+      "genreOfficial": [
+        "боевик",
+        "драма",
+        "приключения",
+        "фантастика"
+      ],
+      "genreUser": {
+        "name": "family",
+        "label": "Семейный"
+      },
+      "category": "series",
+      "datePublication": {
+        "date": 29,
+        "mounth": "04",
+        "year": 2022,
+        "minute": "04",
+        "hour": 17,
+        "second": 31
+      },
+      "dateRelease": "2014",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/817506.jpg",
       "view": "view"
     }
   ],

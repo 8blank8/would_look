@@ -14,7 +14,6 @@ const AddFilmForm = () => {
    const [genreActive, setGenreActive] = useState({ name: 'comedy', label: 'Комедия' });
    const [apiFilm, setApiFilm] = useState();
    const [apiFilmsArr, setApiFilmsArr] = useState([]);
-   const [changeTitleFilm, setChangeTitleFilm] = useState('');
 
    const request = useHttp();
    const { searchFilms } = FilmService();
@@ -35,7 +34,7 @@ const AddFilmForm = () => {
 
    useEffect(() => {
       setApiFilmsArray(titleFilm);
-   }, [changeTitleFilm])
+   }, [titleFilm])
 
    //category
 
@@ -145,7 +144,7 @@ const AddFilmForm = () => {
    //setApiFimlsArr
 
    const setApiFilmsArray = (text) => {
-      searchFilms(text).then(data => setApiFilmsArr(data));
+      searchFilms(text).then(data => setApiFilmsArr(data))
    }
 
    //modalForm
@@ -191,7 +190,6 @@ const AddFilmForm = () => {
                   value={titleFilm}
                   onChange={(e) => {
                      setTitleFilm(e.target.value);
-                     setChangeTitleFilm(e.target.value);
                   }} />
                <FilmListServer setApiFilm={setApiFilm} apiFilmsArray={apiFilmsArr} setTitleFilm={setTitleFilm} />
                <textarea
