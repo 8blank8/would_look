@@ -153,21 +153,55 @@
 
 
 .modalform{
+   position: fixed;
+   right: 30px;
    &__wrapper{
-      
+      width: 345px;
+      height: 100px;
+      background-color: #222222;
+      display: flex;
+      padding: 10px 0px 0px 10px;
+      box-sizing: border-box;
    }
 
    &__img{
-
+      & img{
+         width: 60px;
+         height: 80px;
+         background-size: contain;
+      }
    }
 
    &__body{
-
+      padding: 0px 0px 0px 10px;
    }
 
-   &__close{}
+   &__close{
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 13px;
+      & span{
+         width: 15px;
+         height: 1px;
+         background-color: #fff;
+         display: block;
 
-   &__tile{}
+         &:nth-child(1){
+            transform: rotate(45deg);
+         }
+         &:nth-child(2){
+            transform: rotate(-45deg);
+         }
+      }
+   }
 
-   &__description{}
+   &__tile{
+      font-size: 18px;
+      padding: 10px 0px 0px 0px;
+   }
+
+   &__description{
+      padding: 5px 0px 0px 0px;
+   }
 }

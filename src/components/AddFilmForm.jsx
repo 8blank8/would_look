@@ -22,6 +22,9 @@ const AddFilmForm = () => {
    const [categoryArr, setCategoryArr] = useState([]);
    const [genreArr, setGenreArr] = useState([]);
 
+   const [openModal, setOpenModal] = useState(false);
+   const [modalContent, setModalContent] = useState('');
+
    useEffect(() => {
       request('http://localhost:3001/categoties')
          .then(data => setCategoryArr(data));
@@ -133,13 +136,46 @@ const AddFilmForm = () => {
 
       request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
          .then(data => console.log(data))
-         .then(clearForm());
+         .then(clearForm())
+         .then(onShowModal(film.posterUrl, film.title, view));
    }
 
    //setApiFimlsArr
 
    const setApiFilmsArray = (text) => {
       searchFilms(text).then(data => setApiFilmsArr(data));
+   }
+
+   //modalForm
+
+   const onShowModal = (img, title, category) => {
+      setModalContent(
+         <div className="modalform">
+            <div className="modalform__wrapper">
+               <div className="modalform__img">
+                  <img src={img} alt={title} />
+               </div>
+               <div className="modalform__body">
+                  <div className="modalform__close" onClick={() => setOpenModal(false)}>
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <div className="modalform__tile">
+                     {title}
+                  </div>
+                  <div className="modalform__description">
+                     добавлено в {category === 'view' ? 'просмотренно' : 'посмотреть'}
+                  </div>
+               </div>
+            </div>
+         </div>
+      );
+      setOpenModal(true);
+
+      setTimeout(() => {
+         setModalContent('');
+         setOpenModal(false);
+      }, 4000);
    }
 
    return (
@@ -194,26 +230,7 @@ const AddFilmForm = () => {
                </button>
             </div>
          </form>
-         <div className="modalform">
-            <div className="modalform__wrapper">
-               <div className="modalform__img">
-                  asdasd
-               </div>
-               <div className="modalform__body">
-                  <div className="modalform__close">
-                     <span></span>
-                     <span></span>
-                  </div>
-                  <div className="modalform__tile">
-                     Название
-                  </div>
-                  <div className="modalform__description">
-                     добавлено в категорию
-                  </div>
-               </div>
-
-            </div>
-         </div>
+         {openModal && modalContent}
       </>
    )
 }
