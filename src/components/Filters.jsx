@@ -30,7 +30,6 @@ const Filters = () => {
          .then(data => setCategoryArr([...categoryArr, ...data]));
       request('http://localhost:3001/genres')
          .then(data => setGenreArr([...genreArr, ...data]));
-
       document.body.addEventListener('click', onCloseFilterItem);
    }, []);
 
@@ -42,17 +41,16 @@ const Filters = () => {
    const addSortItem = () => {
       return sortArr.map(({ label, name }) => {
          return (
-            <li
-               key={uuidv4()}
-               className={'filters__sort-item filters__item filtab'}
-               onClick={() => {
-                  dispatch(setActiveFilterSort({ name, label }));
-                  dispatch(setFilterSort(name, activeFilterCategory.name, activeFilterGenre.name, filterView, films));
-                  setSortTab(false);
-               }}
-            >
-               {label}
-            </li >
+            <FilterItem
+               activeFilterSort={name}
+               activeFilterCategory={activeFilterCategory.name}
+               activeFilterGenre={activeFilterGenre.name}
+               setActiveFilter={setActiveFilterSort}
+               name={name}
+               label={label}
+               setTab={setSortTab}
+               filterView={filterView}
+               films={films} />
          )
       });
    }
@@ -60,17 +58,16 @@ const Filters = () => {
    const addCategoryItem = () => {
       return categoryArr.map(({ name, label }) => {
          return (
-            <li
-               key={uuidv4()}
-               className={'filters__category-item filters__item'}
-               onClick={() => {
-                  dispatch(setActiveFilterCategory({ name, label }));
-                  dispatch(setFilterSort(activeFilterSort.name, name, activeFilterGenre.name, filterView, films));
-                  setCategoryTab(false);
-               }}
-            >
-               {label}
-            </li >
+            <FilterItem
+               activeFilterSort={activeFilterSort.name}
+               activeFilterCategory={name}
+               activeFilterGenre={activeFilterGenre.name}
+               setActiveFilter={setActiveFilterCategory}
+               name={name}
+               label={label}
+               setTab={setCategoryTab}
+               filterView={filterView}
+               films={films} />
          )
       });
    }
@@ -78,17 +75,16 @@ const Filters = () => {
    const addGenreItem = () => {
       return genreArr.map(({ name, label }) => {
          return (
-            <li
-               key={uuidv4()}
-               className={'filters__genre-item filters__item'}
-               onClick={() => {
-                  dispatch(setActiveFilterGenre({ name, label }));
-                  dispatch(setFilterSort(activeFilterSort.name, activeFilterCategory.name, name, filterView, films));
-                  setGenreTab(false);
-               }}
-            >
-               {label}
-            </li >
+            <FilterItem
+               activeFilterSort={activeFilterSort.name}
+               activeFilterCategory={activeFilterCategory.name}
+               activeFilterGenre={name}
+               setActiveFilter={setActiveFilterGenre}
+               name={name}
+               label={label}
+               setTab={setGenreTab}
+               filterView={filterView}
+               films={films} />
          )
       });
    }
@@ -175,6 +171,25 @@ const Filters = () => {
             </div>
          </div>
       </>
+   )
+}
+
+const FilterItem = ({ activeFilterSort, activeFilterCategory, activeFilterGenre, setActiveFilter, name, label, setTab, filterView, films }) => {
+
+   const dispatch = useDispatch();
+
+   return (
+      <li
+         key={uuidv4()}
+         className={'filters__item'}
+         onClick={() => {
+            dispatch(setActiveFilter({ name, label }));
+            dispatch(setFilterSort(activeFilterSort, activeFilterCategory, activeFilterGenre, filterView, films));
+            setTab(false);
+         }}
+      >
+         {label}
+      </li >
    )
 }
 

@@ -69,7 +69,6 @@
 		}
 
 		&__item {
-      
             cursor: pointer;
             color: #fff;
             border-bottom:1px solid #222222 ;
@@ -88,8 +87,8 @@
 		&__category-list {
          width: 220px;
          position: absolute;
-         right: 15px;
          top: 28px;
+         left: 0;
 		}
 
 		&__category-item {
@@ -113,7 +112,6 @@
          top: 28px;
          font-size: 18px;
          color: #2F2F2F;
-         text-align: center;
          width: 220px;
 		}
 
