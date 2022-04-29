@@ -91,7 +91,9 @@ const AddFilmForm = () => {
 
    //clearForm
 
-   const clearForm = () => {
+   const clearForm = (e) => {
+      e.preventDefault()
+
       setTitleFilm('');
       setOptionDesc('');
       setGradeActive(1);
