@@ -103,6 +103,10 @@ const AddFilmForm = () => {
       e.preventDefault();
 
       const film = apiFilmsArr[apiFilm];
+      const date = new Date();
+      const addZeroDate = (date) => {
+         return date < 10 ? '0' + date : date;
+      }
 
       const data = {
          "id": uuidv4(),
@@ -114,7 +118,14 @@ const AddFilmForm = () => {
          "genreOfficial": film.genreOfficial,
          "genreUser": genreActive,
          "category": categoryActive,
-         "datePublication": "11.12.22",
+         "datePublication": {
+            date: addZeroDate(date.getDate()),
+            mounth: addZeroDate(date.getMonth() + 1),
+            year: addZeroDate(date.getFullYear()),
+            minute: addZeroDate(date.getMinutes()),
+            hour: addZeroDate(date.getHours()),
+            second: addZeroDate(date.getSeconds())
+         },
          "dateRelease": film.dateRelease,
          "posterUrl": film.posterUrl,
          "view": view
@@ -132,56 +143,78 @@ const AddFilmForm = () => {
    }
 
    return (
-      <form className='form'>
-         <div className="form__block">
-            <input
-               type="text"
-               placeholder='Название'
-               className="form__input"
-               value={titleFilm}
-               onChange={(e) => {
-                  setTitleFilm(e.target.value);
-                  setChangeTitleFilm(e.target.value);
-               }} />
-            <FilmListServer setApiFilm={setApiFilm} apiFilmsArray={apiFilmsArr} setTitleFilm={setTitleFilm} />
-            <textarea
-               className="form__textarea"
-               placeholder="Описание"
-               value={optionDescr}
-               onChange={(e) => setOptionDesc(e.target.value)}></textarea>
-            <div className="grade">Оценка</div>
-            <ul className="form__grade">
-               {gradeItem}
-            </ul>
+      <>
+         <form className='form'>
+            <div className="form__block">
+               <input
+                  type="text"
+                  placeholder='Название'
+                  className="form__input"
+                  value={titleFilm}
+                  onChange={(e) => {
+                     setTitleFilm(e.target.value);
+                     setChangeTitleFilm(e.target.value);
+                  }} />
+               <FilmListServer setApiFilm={setApiFilm} apiFilmsArray={apiFilmsArr} setTitleFilm={setTitleFilm} />
+               <textarea
+                  className="form__textarea"
+                  placeholder="Описание"
+                  value={optionDescr}
+                  onChange={(e) => setOptionDesc(e.target.value)}></textarea>
+               <div className="grade">Оценка</div>
+               <ul className="form__grade">
+                  {gradeItem}
+               </ul>
+            </div>
+            <div className="form__block">
+               <div className="category">Категория</div>
+               <ul className="form__category">
+                  {categoryItem}
+               </ul>
+               <div className="genre">Жанр</div>
+               <ul className="form__genre">
+                  {genreItem}
+               </ul>
+               <button
+                  className="form__reset"
+                  onClick={clearForm}>
+                  ОЧИСТИТЬ
+               </button>
+            </div>
+            <div className="form__buttons">
+               <button
+                  onClick={(e) => addDataServer(e, "look")}
+                  className="form__look form__button-end">
+                  ПОСМОТРЕТЬ
+               </button>
+               <button
+                  onClick={(e) => addDataServer(e, "view")}
+                  className="form__view form__button-end">
+                  ПРОСМОТРЕНО
+               </button>
+            </div>
+         </form>
+         <div className="modalform">
+            <div className="modalform__wrapper">
+               <div className="modalform__img">
+                  asdasd
+               </div>
+               <div className="modalform__body">
+                  <div className="modalform__close">
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <div className="modalform__tile">
+                     Название
+                  </div>
+                  <div className="modalform__description">
+                     добавлено в категорию
+                  </div>
+               </div>
+
+            </div>
          </div>
-         <div className="form__block">
-            <div className="category">Категория</div>
-            <ul className="form__category">
-               {categoryItem}
-            </ul>
-            <div className="genre">Жанр</div>
-            <ul className="form__genre">
-               {genreItem}
-            </ul>
-            <button
-               className="form__reset"
-               onClick={clearForm}>
-               ОЧИСТИТЬ
-            </button>
-         </div>
-         <div className="form__buttons">
-            <button
-               onClick={(e) => addDataServer(e, "look")}
-               className="form__look form__button-end">
-               ПОСМОТРЕТЬ
-            </button>
-            <button
-               onClick={(e) => addDataServer(e, "view")}
-               className="form__view form__button-end">
-               ПРОСМОТРЕНО
-            </button>
-         </div>
-      </form>
+      </>
    )
 }
 

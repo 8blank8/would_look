@@ -23,6 +23,8 @@ const FilmPage = () => {
       view
    } = filmPageItem[0];
 
+   const { date, mounth, year } = datePublication;
+
    const request = useHttp();
    const dispatch = useDispatch();
 
@@ -81,7 +83,7 @@ const FilmPage = () => {
                   Пользовательский жанр: {genreUser.label}
                </div>
                <div className="film__publicate">
-                  Добавлено: {datePublication}
+                  Добавлено: {`${date}.${mounth}.${year}`}
                </div>
             </div>
             <div className="film__block-right">
