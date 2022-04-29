@@ -30,7 +30,7 @@
       },
       "dateRelease": "2013",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/749374.jpg",
-      "view": "look"
+      "view": "view"
     },
     {
       "id": "e62d2711-aed1-41c6-bba3-72dfa91e36cf",
@@ -210,6 +210,37 @@
       },
       "dateRelease": "2014",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/817506.jpg",
+      "view": "view"
+    },
+    {
+      "id": "b13ec7a9-ad98-4436-813b-0b25c32eb200",
+      "title": "История игрушек",
+      "descriptioUser": "",
+      "descriptionOfficial": "Каждый ребенок верит, что когда он оставляет свои игрушки одни, они начинают заниматься своими делами. Этот мультипликационный фильм позволяет убедиться им в своей правоте.\n\nОсновная идея фильма - каждая игрушка боится надоесть, стать забытой, замененной другой, так как весь смысл их существования - доставлять счастье своим хозяевам.",
+      "grade": 6,
+      "rating": "7.9",
+      "genreOfficial": [
+        "комедия",
+        "мультфильм",
+        "приключения",
+        "семейный",
+        "фэнтези"
+      ],
+      "genreUser": {
+        "name": "family",
+        "label": "Семейный"
+      },
+      "category": "cartoon",
+      "datePublication": {
+        "date": 29,
+        "mounth": "04",
+        "year": 2022,
+        "minute": 24,
+        "hour": 19,
+        "second": 27
+      },
+      "dateRelease": "1995",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/482.jpg",
       "view": "view"
     }
   ],

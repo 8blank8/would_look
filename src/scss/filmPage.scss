@@ -2,6 +2,11 @@
    font-size: 20px;
    &_cursor{
       cursor: pointer;
+      transition-duration: 0.3s;
+   &:hover{
+      transform: scale(120%);
+   box-shadow: 0px 0 20px #ffffff80;
+   }
    }
    & a {
       text-decoration: none;
