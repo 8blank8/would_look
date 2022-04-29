@@ -138,7 +138,7 @@ const AddFilmForm = () => {
 
       request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
          .then(data => console.log(data))
-         .then(clearForm())
+         .then(clearForm(e))
          .then(onShowModal(film.posterUrl, film.title, view));
    }
 
