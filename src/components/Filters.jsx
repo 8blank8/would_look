@@ -69,7 +69,7 @@ const Filters = () => {
                   setCategoryTab(false);
                }}
             >
-               <span>{label}</span>
+               {label}
             </li >
          )
       });
@@ -87,7 +87,7 @@ const Filters = () => {
                   setGenreTab(false);
                }}
             >
-               <span>{label}</span>
+               {label}
             </li >
          )
       });
