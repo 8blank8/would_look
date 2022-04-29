@@ -23,7 +23,8 @@
    padding: 29px 0px 0px 0px;
    display: flex;
    font-size: 20px;
-
+   justify-content: space-between;
+   max-width: 950px;
    
    & p{
       margin: 0px 50px 0px 0px;
@@ -45,6 +46,7 @@
 
 		&__sort {
          position: relative;
+         width: 400px;
 		}
 
       &__sort-p{
@@ -67,7 +69,7 @@
 		}
 
 		&__item {
-         & span{
+      
             cursor: pointer;
             color: #fff;
             border-bottom:1px solid #222222 ;
@@ -76,11 +78,11 @@
             margin: 0px auto;
             padding: 15px 0px 10px 15px;
             box-sizing: border-box;
-         }
 		}
 
 		&__category {
          position: relative;
+         width: 290px;
 		}
 
 		&__category-list {
@@ -95,6 +97,7 @@
 
 		&__genre {
          position: relative;
+         width: 250px;
 		}
 
 		&__block {
