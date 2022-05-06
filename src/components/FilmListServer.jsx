@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
+import FilmService from "../services/FilmService";
 
 const FilmListServer = ({ setApiFilm, apiFilmsArray, setTitleFilm }) => {
 
    const [visibleList, setVisibleList] = useState(false);
+
+   const { getFilmId } = FilmService();
 
    useEffect(() => {
       if (apiFilmsArray.length >= 1) {
@@ -15,14 +18,14 @@ const FilmListServer = ({ setApiFilm, apiFilmsArray, setTitleFilm }) => {
          return (
             <li
                onClick={() => {
-                  setApiFilm(i);
+                  getFilmId(id).then(data => setApiFilm(data));
                   setVisibleList(false);
                   setTitleFilm(title);
                }}
                key={id}
                className="list__item">
                <div className="list__image">
-                  <img src={posterUrl} alt="" />
+                  <img src={posterUrl} alt={title} />
                </div>
                <div className="list__wrapper">
                   <div className="list__title">

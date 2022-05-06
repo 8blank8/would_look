@@ -87,6 +87,92 @@
       "dateRelease": "2008",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/61237.jpg",
       "view": "view"
+    },
+    {
+      "descriptioUser": "",
+      "grade": 1,
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 27,
+        "hour": "02",
+        "second": 50
+      },
+      "view": "view",
+      "id": 571336
+    },
+    {
+      "descriptioUser": "",
+      "grade": 1,
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 29,
+        "hour": "02",
+        "second": "08"
+      },
+      "view": "view",
+      "id": 571337
+    },
+    {
+      "descriptioUser": "q",
+      "grade": 1,
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 30,
+        "hour": "02",
+        "second": 36
+      },
+      "view": "view",
+      "id": 571338
+    },
+    {
+      "id": 814016,
+      "title": "Люди Икс: Апокалипсис",
+      "descriptioUser": "",
+      "descriptionOfficial": "События «Дней Минувшего Будущего» оказали колоссальное влияние на мир, где мутанты и люди борются за свое место под Солнцем. В это нелегкое время Людям Икс предстоит столкнуться со своим самым опасным противником - древним мутантом Апокалипсисом, существом, схватка с которым может стать последней не только для мутантов, но и в принципе для всего человечества. В поисках способа победы над неуязвимым и бессмертным монстром Людям Икс предстоит узнать больше о происхождении своего вида. Но Апокалипсис неимоверно силен, и вероятность победы все уменьшается, ведь он твердо убежден, что только сильнейшие имеют право на выживание...",
+      "grade": 1,
+      "rating": 7,
+      "genreOfficial": [
+        "фантастика",
+        "приключения",
+        "боевик"
+      ],
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 32,
+        "hour": "02",
+        "second": 56
+      },
+      "dateRelease": 2016,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/814016.jpg",
+      "view": "view"
     }
   ],
   "genres": [

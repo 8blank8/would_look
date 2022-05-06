@@ -110,20 +110,18 @@ const AddFilmForm = () => {
    const addDataServer = (e, view) => {
       e.preventDefault();
 
-      const film = apiFilmsArr[apiFilm];
       const date = new Date();
       const addZeroDate = (date) => {
          return date < 10 ? '0' + date : date;
       }
-      console.log(film)
       const data = {
-         "id": film.id,
-         "title": film.title,
+         "id": apiFilm.id,
+         "title": apiFilm.title,
          "descriptioUser": optionDescr,
-         "descriptionOfficial": film.descriptionOfficial,
+         "descriptionOfficial": apiFilm.descriptionOfficial,
          "grade": gradeActive,
-         "rating": film.rating,
-         "genreOfficial": film.genreOfficial,
+         "rating": apiFilm.rating,
+         "genreOfficial": apiFilm.genreOfficial,
          "genreUser": genreActive,
          "category": categoryActive,
          "datePublication": {
@@ -134,8 +132,8 @@ const AddFilmForm = () => {
             hour: addZeroDate(date.getHours()),
             second: addZeroDate(date.getSeconds())
          },
-         "dateRelease": film.dateRelease,
-         "posterUrl": film.posterUrl,
+         "dateRelease": apiFilm.dateRelease,
+         "posterUrl": apiFilm.posterUrl,
          "view": view
       }
       request(`http://localhost:3001/films-view`, 'GET')
@@ -155,8 +153,6 @@ const AddFilmForm = () => {
                   .then(onShowModal(data, 'добавленно'));
             }
          })
-
-
    }
 
    //setApiFimlsArr
