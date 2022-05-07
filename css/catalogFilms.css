@@ -30,6 +30,10 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 950px;
 }
 
 .filters p {
@@ -54,6 +58,7 @@
 
 .filters__sort {
   position: relative;
+  width: 400px;
 }
 
 .filters__sort-list {
@@ -68,7 +73,7 @@
   font-size: 20px;
 }
 
-.filters__item span {
+.filters__item {
   cursor: pointer;
   color: #fff;
   border-bottom: 1px solid #222222;
@@ -82,17 +87,19 @@
 
 .filters__category {
   position: relative;
+  width: 290px;
 }
 
 .filters__category-list {
   width: 220px;
   position: absolute;
-  right: 40px;
   top: 28px;
+  left: 0;
 }
 
 .filters__genre {
   position: relative;
+  width: 250px;
 }
 
 .filters__block {
@@ -106,9 +113,10 @@
 }
 
 .filters__genre-list {
+  position: absolute;
+  top: 28px;
   font-size: 18px;
   color: #2F2F2F;
-  text-align: center;
   width: 220px;
 }
 

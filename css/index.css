@@ -56,6 +56,7 @@ table {
 body {
   background-color: #111111;
   color: #fff;
+  padding: 0px 0px 50px 0px;
 }
 
 .App {
@@ -309,6 +310,67 @@ body {
   background-color: #222222;
 }
 
+.modalform {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.modalform__wrapper {
+  width: 345px;
+  height: 100px;
+  background-color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0px 0px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modalform__img img {
+  width: 60px;
+  height: 80px;
+  background-size: contain;
+}
+
+.modalform__body {
+  padding: 0px 0px 0px 10px;
+}
+
+.modalform__close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
+.modalform__close span {
+  width: 15px;
+  height: 1px;
+  background-color: #fff;
+  display: block;
+}
+
+.modalform__close span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modalform__close span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modalform__tile {
+  font-size: 18px;
+  padding: 10px 0px 0px 0px;
+}
+
+.modalform__description {
+  padding: 5px 0px 0px 0px;
+}
+
 .content {
   padding: 80px 0px 0px 0px;
 }
@@ -341,6 +403,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 950px;
 }
 
 .filters p {
@@ -365,6 +431,7 @@ body {
 
 .filters__sort {
   position: relative;
+  width: 400px;
 }
 
 .filters__sort-list {
@@ -379,7 +446,7 @@ body {
   font-size: 20px;
 }
 
-.filters__item span {
+.filters__item {
   cursor: pointer;
   color: #fff;
   border-bottom: 1px solid #222222;
@@ -393,17 +460,19 @@ body {
 
 .filters__category {
   position: relative;
+  width: 290px;
 }
 
 .filters__category-list {
   width: 220px;
   position: absolute;
-  right: 40px;
   top: 28px;
+  left: 0;
 }
 
 .filters__genre {
   position: relative;
+  width: 250px;
 }
 
 .filters__block {
@@ -417,9 +486,10 @@ body {
 }
 
 .filters__genre-list {
+  position: absolute;
+  top: 28px;
   font-size: 18px;
   color: #2F2F2F;
-  text-align: center;
   width: 220px;
 }
 
@@ -471,7 +541,19 @@ body {
 
 .film {
   font-size: 20px;
+}
+
+.film_cursor {
   cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.film_cursor:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+  -webkit-box-shadow: 0px 0 20px #ffffff80;
+          box-shadow: 0px 0 20px #ffffff80;
 }
 
 .film a {
@@ -565,6 +647,57 @@ body {
 }
 
 .film__button {
+  cursor: pointer;
+}
+
+.modal {
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000070;
+}
+
+.modal__wrapper {
+  width: 500px;
+  height: 200px;
+  background-color: #363636;
+  margin: 0px auto;
+  padding: 55px 55px 35px 55px;
+  -webkit-transform: translateY(calc(50vh - 50%));
+          transform: translateY(calc(50vh - 50%));
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal__text {
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.modal__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 240px;
+  margin: 0px auto;
+  padding: 39px 0px 0px 0px;
+}
+
+.modal__button {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 3px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
 }
 

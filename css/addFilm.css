@@ -200,3 +200,64 @@
 .active__button {
   background-color: #222222;
 }
+
+.modalform {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.modalform__wrapper {
+  width: 345px;
+  height: 100px;
+  background-color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0px 0px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modalform__img img {
+  width: 60px;
+  height: 80px;
+  background-size: contain;
+}
+
+.modalform__body {
+  padding: 0px 0px 0px 10px;
+}
+
+.modalform__close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
+.modalform__close span {
+  width: 15px;
+  height: 1px;
+  background-color: #fff;
+  display: block;
+}
+
+.modalform__close span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modalform__close span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modalform__tile {
+  font-size: 18px;
+  padding: 10px 0px 0px 0px;
+}
+
+.modalform__description {
+  padding: 5px 0px 0px 0px;
+}
