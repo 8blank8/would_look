@@ -10,6 +10,10 @@
   padding: 130px 0px 0px 0px;
 }
 
+.form__input-title {
+  position: relative;
+}
+
 .form__block {
   max-width: 558px;
   width: 100%;

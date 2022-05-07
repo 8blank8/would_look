@@ -1,6 +1,7 @@
 .list {
   width: 544px;
   background-color: #0C0C0C;
+  position: absolute;
 }
 
 .list__item {

@@ -4,6 +4,10 @@
    flex-wrap: wrap;
    padding: 130px 0px 0px 0px;
 
+   &__input-title{
+      position: relative;
+   }
+
    &__block {
       max-width: 558px;
       width: 100%;

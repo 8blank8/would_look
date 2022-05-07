@@ -184,16 +184,18 @@ const AddFilmForm = () => {
       <>
          <form className='form'>
             <div className="form__block">
-               <input
-                  type="text"
-                  placeholder='Название'
-                  className="form__input"
-                  value={titleFilm}
-                  onChange={(e) => {
-                     setTitleFilm(e.target.value);
-                     setChengeTitle(e.target.value);
-                  }} />
-               <FilmListServer setApiFilm={setApiFilm} apiFilmsArray={apiFilmsArr} setTitleFilm={setTitleFilm} />
+               <div className="form__input-title">
+                  <input
+                     type="text"
+                     placeholder='Название'
+                     className="form__input"
+                     value={titleFilm}
+                     onChange={(e) => {
+                        setTitleFilm(e.target.value);
+                        setChengeTitle(e.target.value);
+                     }} />
+                  <FilmListServer setApiFilm={setApiFilm} apiFilmsArray={apiFilmsArr} setTitleFilm={setTitleFilm} />
+               </div>
                <textarea
                   className="form__textarea"
                   placeholder="Описание"
