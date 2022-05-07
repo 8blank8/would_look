@@ -39,6 +39,9 @@ const FilmPage = () => {
    const onAddView = (id) => {
       request(`http://localhost:3001/films-view/${id}`, 'PUT', JSON.stringify({ ...filmPageItem[0], view: 'view' }));
    }
+   const onAddLook = (id) => {
+      request(`http://localhost:3001/films-view/${id}`, 'PUT', JSON.stringify({ ...filmPageItem[0], view: 'look' }));
+   }
 
    const onShowModal = (text, func) => {
       return (
@@ -114,14 +117,14 @@ const FilmPage = () => {
             {descriptioUser.length === 0 ? 'Описание отсутствует...' : descriptioUser}
          </div>
          <div className="film__buttons">
-            {view === 'look' ? <div
+            <div
                className="film__button"
                onClick={() => {
                   setModalOpen(true);
-                  setModalContent(onShowModal(`переместить ${title} в просмотренное?`, onAddView))
+                  view === 'look' ? setModalContent(onShowModal(`переместить ${title} в просмотренное?`, onAddView)) : setModalContent(onShowModal(`переместить ${title} в посмотреть?`, onAddLook))
                }}>
-               Переместить в просмотренное
-            </div> : <div></div>}
+               {view === 'look' ? 'Переместить в просмотренное' : 'Переместить в посмотреть'}
+            </div>
             <div
                className="film__button"
                onClick={() => {

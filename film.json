@@ -180,7 +180,7 @@
       },
       "dateRelease": "2006",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/406148.jpg",
-      "view": "view"
+      "view": "look"
     },
     {
       "id": "c8ccc7a2-2a38-471a-a5d6-613f2def69b5",
@@ -210,7 +210,7 @@
       },
       "dateRelease": "2014",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/817506.jpg",
-      "view": "view"
+      "view": "look"
     },
     {
       "id": "b13ec7a9-ad98-4436-813b-0b25c32eb200",
@@ -273,6 +273,35 @@
       "dateRelease": "2000",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/635.jpg",
       "view": "view"
+    },
+    {
+      "id": "dd7e7ee7-e648-42ce-a8dd-01b91b7370bf",
+      "title": "Тор 2: Царство тьмы",
+      "descriptioUser": "ывы",
+      "descriptionOfficial": "Могучему Тору предстоит вновь сразиться за восстановление порядка в галактике, встретившись лицом к лицу с древней инопланетной расой, ведомой злодеем Малекитом, который жаждет установить в девяти мирах власть тьмы. Столкнувшись с врагом, более могущественным, чем сам Один и всё воинство Асгарда, Тор должен собрать силы для решающей битвы. Его ждёт опасное путешествие и долгожданная встреча со своей земной возлюбленной Джейн Фостер. Сможет ли Тор рискнуть самым дорогим, чтобы не дать тьме воцариться на просторах вселенной?",
+      "grade": 8,
+      "rating": "7.3",
+      "genreOfficial": [
+        "боевик",
+        "приключения",
+        "фэнтези"
+      ],
+      "genreUser": {
+        "name": "fantastic",
+        "label": "Фантастика"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": "05",
+        "hour": "08",
+        "second": 37
+      },
+      "dateRelease": "2013",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/595938.jpg",
+      "view": "look"
     }
   ],
   "genres": [
