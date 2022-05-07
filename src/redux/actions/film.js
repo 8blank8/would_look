@@ -1,8 +1,8 @@
 
-export const setFilmPageItem = (id) => {
+export const setFilmPageItem = (film) => {
    return {
       type: 'SET_FILMPAGE_ITEM',
-      payload: id
+      payload: film
    }
 }
 

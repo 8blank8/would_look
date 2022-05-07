@@ -24,8 +24,8 @@ const FilmsView = () => {
    }, [])
 
    const setVisibleContent = (arr) => {
-      return arr.map(({ id, posterUrl, title, grade }) => {
-         return <Film key={id} id={id} posterUrl={posterUrl} title={title} grade={grade} />
+      return arr.map(({ ...film }) => {
+         return <Film key={film.id} film={film} />
       });
    }
 

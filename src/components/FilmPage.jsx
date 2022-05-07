@@ -21,7 +21,7 @@ const FilmPage = () => {
       datePublication,
       descriptioUser,
       view
-   } = filmPageItem[0];
+   } = filmPageItem;
 
    const { date, mounth, year } = datePublication;
 

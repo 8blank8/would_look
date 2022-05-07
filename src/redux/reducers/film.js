@@ -29,7 +29,7 @@ const filmReducer = (state = initialState, action) => {
       case 'SET_FILMPAGE_ITEM':
          return {
             ...state,
-            filmPageItem: state.filterFilms.filter(item => item.id === action.payload)
+            filmPageItem: action.payload
          }
       case 'SET_ACTIVE_FILTER_SORT':
          return {
