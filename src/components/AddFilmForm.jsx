@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useHttp } from '../hooks/useHttp';
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setFilmPageItem } from "../redux/actions/film";
 
 import { FilmListServer } from './index';
 import FilmService from "../services/FilmService";
@@ -17,6 +19,7 @@ const AddFilmForm = () => {
    const [changeTitle, setChengeTitle] = useState('');
 
    const request = useHttp();
+   const dispatch = useDispatch();
    const { searchFilms } = FilmService();
 
    const [categoryArr, setCategoryArr] = useState([]);
@@ -141,12 +144,14 @@ const AddFilmForm = () => {
             items.map(item => {
                if (item.id === data.id) {
                   yesFilm = true;
-                  onShowModal(item, 'уже было добавленно')
+                  dispatch(setFilmPageItem(item));
+                  onShowModal(item, 'уже было добавленно');
                }
             })
             if (!yesFilm) {
                request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
                   .then(clearForm(e))
+                  .then(dispatch(setFilmPageItem(data)))
                   .then(onShowModal(data, 'добавленно'));
             }
          })

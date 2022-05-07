@@ -26,7 +26,7 @@
       },
       "dateRelease": "2011",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
-      "view": "view"
+      "view": "look"
     },
     {
       "id": 635,
@@ -57,6 +57,35 @@
       },
       "dateRelease": "2000",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/635.jpg",
+      "view": "view"
+    },
+    {
+      "id": 61237,
+      "title": "Железный человек",
+      "descriptioUser": "",
+      "descriptionOfficial": "Миллиардер-изобретатель Тони Старк попадает в плен к Афганским террористам, которые пытаются заставить его создать оружие массового поражения. В тайне от своих захватчиков Старк конструирует высокотехнологичную киберброню, которая помогает  ему сбежать. Однако по возвращении в США он узнаёт, что в совете директоров его фирмы плетётся заговор, чреватый страшными последствиями. Используя своё последнее изобретение, Старк пытается решить проблемы своей компании радикально...",
+      "grade": 1,
+      "rating": "7.9",
+      "genreOfficial": [
+        "боевик",
+        "приключения",
+        "фантастика"
+      ],
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 29,
+        "hour": 13,
+        "second": 22
+      },
+      "dateRelease": "2008",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/61237.jpg",
       "view": "view"
     }
   ],
