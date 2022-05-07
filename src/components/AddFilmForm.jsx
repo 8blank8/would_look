@@ -135,11 +135,25 @@ const AddFilmForm = () => {
          "posterUrl": film.posterUrl,
          "view": view
       }
+      request(`http://localhost:3001/films-view`, 'GET')
+         .then(items => {
+            let yesFilm = false;
+            items.map(item => {
+               if (item.title === data.title) {
+                  yesFilm = true;
+               }
+            })
+            if (yesFilm) {
+               console.log('film no add')
+            } else {
+               request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
+                  .then(clearForm(e))
+                  .then(onShowModal(film.posterUrl, film.title, view));
+               console.log('film add')
+            }
+         })
 
-      request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
-         .then(data => console.log(data))
-         .then(clearForm(e))
-         .then(onShowModal(film.posterUrl, film.title, view));
+
    }
 
    //setApiFimlsArr
