@@ -27,6 +27,37 @@
       "dateRelease": "2011",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
       "view": "view"
+    },
+    {
+      "id": 635,
+      "title": "Побег из курятника",
+      "descriptioUser": "ываываыва",
+      "descriptionOfficial": "Курочкам на ферме миссис Туиди приходится нелегко. Для каждой из этих несчастных птиц любое, даже самое погожее утро, может стать последним: в мгновение ока они могут угодить в суп или стать начинкой для пирожка.\n\nБезропотные домашние птички живут в постоянном страхе в ужасных курятниках, напоминающих бараки концлагеря. Все попытки вырваться из страшной фермы на волю оканчиваются провалом. Но однажды на ферме объявляется веселый американский петух Рокки...",
+      "grade": 5,
+      "rating": "6.9",
+      "genreOfficial": [
+        "драма",
+        "комедия",
+        "мультфильм",
+        "приключения",
+        "семейный"
+      ],
+      "genreUser": {
+        "name": "fantastic",
+        "label": "Фантастика"
+      },
+      "category": "cartoon",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 25,
+        "hour": 13,
+        "second": "09"
+      },
+      "dateRelease": "2000",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/635.jpg",
+      "view": "view"
     }
   ],
   "genres": [

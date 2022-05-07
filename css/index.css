@@ -119,6 +119,10 @@ body {
   padding: 130px 0px 0px 0px;
 }
 
+.form__input-title {
+  position: relative;
+}
+
 .form__block {
   max-width: 558px;
   width: 100%;
@@ -317,6 +321,7 @@ body {
 }
 
 .modalform__wrapper {
+  color: #fff;
   width: 345px;
   height: 100px;
   background-color: #222222;
@@ -704,6 +709,7 @@ body {
 .list {
   width: 544px;
   background-color: #0C0C0C;
+  position: absolute;
 }
 
 .list__item {

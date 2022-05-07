@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useHttp } from '../hooks/useHttp';
-// import { v4 as uuidv4 } from 'uuid';
+import { Link } from "react-router-dom";
 
 import { FilmListServer } from './index';
 import FilmService from "../services/FilmService";
@@ -165,15 +165,15 @@ const AddFilmForm = () => {
    const onShowModal = (data, text) => {
       setModalContent(
          <div className="modalform">
-            <div className="modalform__wrapper">
+            <div className="modalform__close" onClick={() => setOpenModal(false)}>
+               <span></span>
+               <span></span>
+            </div>
+            <Link to={`/catalog/view/${data.id}`} className="modalform__wrapper">
                <div className="modalform__img">
                   <img src={data.posterUrl} alt={data.title} />
                </div>
                <div className="modalform__body">
-                  <div className="modalform__close" onClick={() => setOpenModal(false)}>
-                     <span></span>
-                     <span></span>
-                  </div>
                   <div className="modalform__tile">
                      {data.title}
                   </div>
@@ -181,7 +181,7 @@ const AddFilmForm = () => {
                      {text} в {data.view === 'view' ? 'просмотренно' : 'посмотреть'}
                   </div>
                </div>
-            </div>
+            </Link>
          </div>
       );
       setOpenModal(true);

@@ -2,7 +2,7 @@ import { useHttp } from '../hooks/useHttp';
 
 const FilmService = () => {
 
-   const _apiKey = 'e15d6bd8-6f84-4f31-802b-11148c933567';
+   const _apiKey = '1bd55337-85e5-49e8-b4c6-f2a19736b048';
    const _apiBase = 'https://kinopoiskapiunofficial.tech/api/v2.1/films/'
    const request = useHttp();
 
