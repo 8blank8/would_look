@@ -141,15 +141,13 @@ const AddFilmForm = () => {
             items.map(item => {
                if (item.title === data.title) {
                   yesFilm = true;
+                  onShowModal(item, 'уже было добавленно')
                }
             })
-            if (yesFilm) {
-               console.log('film no add')
-            } else {
+            if (!yesFilm) {
                request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
                   .then(clearForm(e))
-                  .then(onShowModal(film.posterUrl, film.title, view));
-               console.log('film add')
+                  .then(onShowModal(data, 'добавленно'));
             }
          })
 
@@ -164,12 +162,12 @@ const AddFilmForm = () => {
 
    //modalForm
 
-   const onShowModal = (img, title, category) => {
+   const onShowModal = (data, text) => {
       setModalContent(
          <div className="modalform">
             <div className="modalform__wrapper">
                <div className="modalform__img">
-                  <img src={img} alt={title} />
+                  <img src={data.posterUrl} alt={data.title} />
                </div>
                <div className="modalform__body">
                   <div className="modalform__close" onClick={() => setOpenModal(false)}>
@@ -177,10 +175,10 @@ const AddFilmForm = () => {
                      <span></span>
                   </div>
                   <div className="modalform__tile">
-                     {title}
+                     {data.title}
                   </div>
                   <div className="modalform__description">
-                     добавлено в {category === 'view' ? 'просмотренно' : 'посмотреть'}
+                     {text} в {data.view === 'view' ? 'просмотренно' : 'посмотреть'}
                   </div>
                </div>
             </div>
