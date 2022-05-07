@@ -31,7 +31,7 @@ const FilmsView = () => {
 
    return (
       <>
-         {setVisibleContent(filterFilms)}
+         {filterFilms.length !== 0 ? setVisibleContent(filterFilms) : <div style={{ 'padding-top': '20px' }}>Вы пока ничего такого не добавили</div>}
       </>
    )
 

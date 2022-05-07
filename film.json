@@ -302,6 +302,34 @@
       "dateRelease": "2013",
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/595938.jpg",
       "view": "look"
+    },
+    {
+      "id": "2ca75106-74a8-46e5-81a1-0e5cc3444371",
+      "title": "Ультраамериканцы",
+      "descriptioUser": "тилитлот",
+      "descriptionOfficial": "А вдруг ты тоже спецагент, обладающий уникальной боевой подготовкой и сверхинтеллектом? Но просто ты забыл об этом… Как Майк Хоуэлл, лоботряс из супермаркета, который безмятежно читает комиксы и курит дурь, пока славное прошлое не настигает его. И обдолбанный агент номер 1 становится мишенью номер 1.",
+      "grade": 7,
+      "rating": "6.2",
+      "genreOfficial": [
+        "боевик",
+        "комедия"
+      ],
+      "genreUser": {
+        "name": "fantastic",
+        "label": "Фантастика"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 25,
+        "hour": "08",
+        "second": 57
+      },
+      "dateRelease": "2015",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/807399.jpg",
+      "view": "look"
     }
   ],
   "genres": [
