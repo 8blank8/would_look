@@ -37,10 +37,10 @@ const FilmPage = () => {
    }
 
    const onAddView = (id) => {
-      request(`http://localhost:3001/films-view/${id}`, 'PUT', JSON.stringify({ ...filmPageItem[0], view: 'view' }));
+      request(`http://localhost:3001/films-view/${id}`, 'PUT', JSON.stringify({ ...filmPageItem, view: 'view' }));
    }
    const onAddLook = (id) => {
-      request(`http://localhost:3001/films-view/${id}`, 'PUT', JSON.stringify({ ...filmPageItem[0], view: 'look' }));
+      request(`http://localhost:3001/films-view/${id}`, 'PUT', JSON.stringify({ ...filmPageItem, view: 'look' }));
    }
 
    const onShowModal = (text, func) => {
