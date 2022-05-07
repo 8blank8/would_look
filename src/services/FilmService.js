@@ -16,14 +16,14 @@ const FilmService = () => {
    }
 
    const _transformFilms = (film) => {
-
       return {
          "title": film.nameRu,
          "descriptionOfficial": film.description,
          "rating": film.rating,
          "genreOfficial": film.genres.map(item => item.genre),
          "dateRelease": film.year,
-         "posterUrl": film.posterUrl
+         "posterUrl": film.posterUrl,
+         "id": film.filmId
       }
    }
 

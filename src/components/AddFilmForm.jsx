@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useHttp } from '../hooks/useHttp';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 import { FilmListServer } from './index';
 import FilmService from "../services/FilmService";
@@ -112,9 +112,9 @@ const AddFilmForm = () => {
       const addZeroDate = (date) => {
          return date < 10 ? '0' + date : date;
       }
-
+      console.log(film)
       const data = {
-         "id": uuidv4(),
+         "id": film.id,
          "title": film.title,
          "descriptioUser": optionDescr,
          "descriptionOfficial": film.descriptionOfficial,
@@ -139,7 +139,7 @@ const AddFilmForm = () => {
          .then(items => {
             let yesFilm = false;
             items.map(item => {
-               if (item.title === data.title) {
+               if (item.id === data.id) {
                   yesFilm = true;
                   onShowModal(item, 'уже было добавленно')
                }
