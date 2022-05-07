@@ -145,7 +145,7 @@ const AddFilmForm = () => {
    //setApiFimlsArr
 
    const setApiFilmsArray = (text) => {
-      searchFilms(text).then(data => setApiFilmsArr(data))
+      searchFilms(text).then(data => setApiFilmsArr(data));
    }
 
    //modalForm

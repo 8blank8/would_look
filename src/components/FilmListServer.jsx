@@ -10,8 +10,8 @@ const FilmListServer = ({ setApiFilm, apiFilmsArray, setTitleFilm }) => {
       }
    }, [apiFilmsArray])
 
-   const visibleContent = apiFilmsArray.map(({ title, rating, dateRelease, posterUrl }, i) => {
-      if (title !== undefined && rating !== 'null' && dateRelease !== 'null') {
+   const visibleContent = apiFilmsArray.map(({ title, rating, dateRelease, posterUrl, id }, i) => {
+      if (i <= 4 && title !== undefined && rating !== 'null' && dateRelease !== 'null') {
          return (
             <li
                onClick={() => {
@@ -19,7 +19,7 @@ const FilmListServer = ({ setApiFilm, apiFilmsArray, setTitleFilm }) => {
                   setVisibleList(false);
                   setTitleFilm(title);
                }}
-               key={i}
+               key={id}
                className="list__item">
                <div className="list__image">
                   <img src={posterUrl} alt="" />
