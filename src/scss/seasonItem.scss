@@ -42,9 +42,13 @@
       &-wrapper{
       }
 
-      &-title{}
+      &-title{
+         font-size: 22px;
+      }
 
-      &-descr{}
+      &-descr{
+         padding: 10px 0px 0px 0px;
+      }
    }
 }
 

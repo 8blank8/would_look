@@ -209,6 +209,38 @@
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/485542.jpg",
       "view": "look",
       "serial": true
+    },
+    {
+      "id": 1117735,
+      "title": "Элита",
+      "descriptioUser": "",
+      "descriptionOfficial": "Трое подростков из бедных семей попадают в «Лас Энчинас» — самую престижную школу в стране. Обеспеченным деткам не нравятся новички, и начинается безжалостная битва за власть. В ход идут любые средства и методы, даже убийство.",
+      "grade": 1,
+      "rating": 7.6,
+      "genreOfficial": [
+        "триллер",
+        "драма",
+        "криминал"
+      ],
+      "genreUser": [
+        {
+          "name": "comedy",
+          "label": "Комедия"
+        }
+      ],
+      "category": "movie",
+      "datePublication": {
+        "date": "08",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 21,
+        "hour": 16,
+        "second": 35
+      },
+      "dateRelease": 2018,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1117735.jpg",
+      "view": "look",
+      "serial": true
     }
   ],
   "genres": [

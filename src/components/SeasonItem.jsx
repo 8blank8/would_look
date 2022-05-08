@@ -34,7 +34,7 @@ const SeasonItem = ({ id }) => {
                                              {nameRu}
                                           </div>
                                           <div className="seasons__hover-descr">
-                                             {synopsis}
+                                             {synopsis === null ? 'Описание отсутствует' : synopsis}
                                           </div>
                                        </div>
                                     </div>

@@ -40,6 +40,14 @@
   z-index: 1;
 }
 
+.seasons__hover-title {
+  font-size: 22px;
+}
+
+.seasons__hover-descr {
+  padding: 10px 0px 0px 0px;
+}
+
 .seasons__ser:hover + .seasons__hover {
   opacity: 1;
 }
