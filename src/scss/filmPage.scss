@@ -162,6 +162,29 @@
       line-height: 20px;
       margin: 0px 10px 0px 0px;
       cursor: pointer;
+      position: relative;
+      &:hover{
+         .seasons__hover{
+            opacity: 1;
+         }
+      }
+   }
+
+   &__hover{
+      position: absolute;
+      left: 0;
+      width: 500px;
+      opacity: 0;
+      z-index: 100;
+      background-color: #363636;
+      transition-duration: 0.3s;
+      padding: 10px;
+      &-wrapper{
+      }
+
+      &-title{}
+
+      &-descr{}
    }
 
 }

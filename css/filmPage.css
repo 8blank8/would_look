@@ -183,4 +183,21 @@
   line-height: 20px;
   margin: 0px 10px 0px 0px;
   cursor: pointer;
+  position: relative;
+}
+
+.seasons__ser:hover .seasons__hover {
+  opacity: 1;
+}
+
+.seasons__hover {
+  position: absolute;
+  left: 0;
+  width: 500px;
+  opacity: 0;
+  z-index: 100;
+  background-color: #363636;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  padding: 10px;
 }
