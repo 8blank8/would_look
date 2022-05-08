@@ -24,21 +24,21 @@ const SeasonItem = ({ id }) => {
                         <div className="seasons__series">
                            {episodes.map(({ nameRu, synopsis }, i) => {
                               return (
-                                 <>
+                                 <div className='seasons__seria'>
                                     <div className="seasons__ser">
                                        {i + 1}
-                                       <div className="seasons__hover">
-                                          <div className="seasons__hover-wrapper">
-                                             <div className="seasons__hover-title">
-                                                {nameRu}
-                                             </div>
-                                             <div className="seasons__hover-descr">
-                                                {synopsis}
-                                             </div>
+                                    </div>
+                                    <div className="seasons__hover">
+                                       <div className="seasons__hover-wrapper">
+                                          <div className="seasons__hover-title">
+                                             {nameRu}
+                                          </div>
+                                          <div className="seasons__hover-descr">
+                                             {synopsis}
                                           </div>
                                        </div>
                                     </div>
-                                 </>
+                                 </div>
                               )
                            })}
                         </div>

@@ -15,6 +15,10 @@
       padding: 10px 0px 0px 0px;
    }
 
+   &__seria{
+      position: relative;
+   }
+
    &__ser{
       border: 2px solid #fff;
       height: 20px;
@@ -23,23 +27,18 @@
       line-height: 20px;
       margin: 0px 10px 0px 0px;
       cursor: pointer;
-      position: relative;
-      &:hover{
-         .seasons__hover{
-            opacity: 1;
-         }
-      }
    }
 
    &__hover{
-      position: absolute;
-      left: 0;
-      width: 500px;
+      pointer-events: none;
       opacity: 0;
-      z-index: 100;
+      position: absolute;
+      left: 0px;
+      width: 400px;
       background-color: #363636;
       transition-duration: 0.3s;
       padding: 10px;
+      z-index: 1;
       &-wrapper{
       }
 
@@ -47,5 +46,8 @@
 
       &-descr{}
    }
+}
 
+.seasons__ser:hover + .seasons__hover{
+   opacity: 1;
 }
