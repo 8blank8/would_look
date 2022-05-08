@@ -2,7 +2,7 @@ import { useHttp } from '../hooks/useHttp';
 
 const FilmService = () => {
 
-   const _apiKey = '1bd55337-85e5-49e8-b4c6-f2a19736b048';
+   const _apiKey = 'e15d6bd8-6f84-4f31-802b-11148c933567';
    const _apiBase = 'https://kinopoiskapiunofficial.tech/api/';
    const request = useHttp();
 
@@ -21,6 +21,15 @@ const FilmService = () => {
       });
       return _transformFilm(res);
    }
+
+   const getSerialSeasons = async (id) => {
+      let res = await request(`${_apiBase}v2.2/films/${id}/seasons`, 'GET', null, {
+         'X-API-KEY': _apiKey,
+         'Content-Type': 'application/json'
+      });
+      return _transformSeasons(res);
+   }
+
 
    const _transformSearchFilms = (film) => {
       return {
@@ -45,7 +54,25 @@ const FilmService = () => {
       }
    }
 
-   return { searchFilms, getFilmId };
+   const _transformSeasons = (serial) => {
+      return {
+         total: serial.total,
+         items: serial.items.map(({ number, episodes }) => {
+            return {
+               number,
+               episodes: episodes.map(({ nameRu, synopsis, releaseDate }) => {
+                  return {
+                     nameRu,
+                     synopsis,
+                     releaseDate
+                  }
+               })
+            }
+         })
+      }
+   }
+
+   return { searchFilms, getFilmId, getSerialSeasons };
 }
 
 export default FilmService;

@@ -136,3 +136,32 @@
       cursor: pointer;
    }
 }
+
+.seasons{
+   &__wrapper{
+      padding: 30px 0px 0px 0px;
+   }
+
+   &__season{
+   }
+
+   &__number{
+      padding: 20px 0px 0px 0px;
+   }
+
+   &__series{
+      display: flex;
+      padding: 10px 0px 0px 0px;
+   }
+
+   &__ser{
+      border: 2px solid #fff;
+      height: 20px;
+      width: 40px;
+      text-align: center;
+      line-height: 20px;
+      margin: 0px 10px 0px 0px;
+      cursor: pointer;
+   }
+
+}

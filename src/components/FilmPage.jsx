@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { deletedFilm } from '../redux/actions/film';
 import { useHttp } from '../hooks/useHttp';
+import FilmService from '../services/FilmService';
 
 
 const FilmPage = () => {
@@ -20,17 +21,24 @@ const FilmPage = () => {
       genreUser,
       datePublication,
       descriptioUser,
-      view
+      view,
+      serial
    } = filmPageItem;
 
    const { date, mounth, year } = datePublication;
 
    const request = useHttp();
    const dispatch = useDispatch();
+   const { getSerialSeasons } = FilmService();
 
    const [modalOpen, setModalOpen] = useState(false);
    const [modalContent, setModalContent] = useState('');
+   const [season, setSeason] = useState('');
 
+   useEffect(() => {
+      getSerialSeasons(id).then(data => setSeason(data));
+   }, []);
+   console.log(season)
    const onDeletedFilm = (id) => {
       request(`http://localhost:3001/films-view/${id}`, 'DELETE')
          .then(dispatch(deletedFilm(id)));
@@ -108,6 +116,31 @@ const FilmPage = () => {
                <div className="film__date">
                   Год выпуска: {dateRelease}
                </div>
+               {serial && <div className="seasons">
+                  <div className="seasons__wrapper">
+                     <div className="seasons__season">
+                        Всего {season.total} сезонов
+                        {season && season.items.map(({ number, episodes }) => {
+                           return (
+                              <>
+                                 <div className="seasons__number">
+                                    {number} сезон
+                                 </div>
+                                 <div className="seasons__series">
+                                    {episodes.map((item, i) => {
+                                       return (
+                                          <div className="seasons__ser">
+                                             {i + 1}
+                                          </div>
+                                       )
+                                    })}
+                                 </div>
+                              </>
+                           )
+                        })}
+                     </div>
+                  </div>
+               </div>}
             </div>
          </div>
          <div className="film__description-user">

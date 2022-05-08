@@ -1,34 +1,6 @@
 {
   "films-view": [
     {
-      "id": 571335,
-      "title": "Бесстыжие",
-      "descriptioUser": "",
-      "descriptionOfficial": "О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.",
-      "grade": 1,
-      "rating": "8.7",
-      "genreOfficial": [
-        "драма",
-        "комедия"
-      ],
-      "genreUser": {
-        "name": "comedy",
-        "label": "Комедия"
-      },
-      "category": "movie",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": "04",
-        "hour": 13,
-        "second": "07"
-      },
-      "dateRelease": "2011",
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
-      "view": "look"
-    },
-    {
       "id": 635,
       "title": "Побег из курятника",
       "descriptioUser": "ываываыва",
@@ -173,6 +145,70 @@
       "dateRelease": 2016,
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/814016.jpg",
       "view": "view"
+    },
+    {
+      "id": 571335,
+      "title": "Бесстыжие",
+      "descriptioUser": "",
+      "descriptionOfficial": "О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.",
+      "grade": 1,
+      "rating": 8.7,
+      "genreOfficial": [
+        "драма",
+        "комедия"
+      ],
+      "genreUser": [
+        {
+          "name": "comedy",
+          "label": "Комедия"
+        }
+      ],
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 10,
+        "hour": "03",
+        "second": 43
+      },
+      "dateRelease": 2011,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
+      "view": "look",
+      "serial": true
+    },
+    {
+      "id": 485542,
+      "title": "Отбросы",
+      "descriptioUser": "",
+      "descriptionOfficial": "Келли, Нейтан, Кертис, Алиша и Саймон выполняют общественные работы за совершение мелких преступлений. Они – не друзья. Более того, у них нет ничего общего. В группе постоянно происходят конфликты, споры и драки. Но в удивительный день во время сильного шторма сильная молния делает из них супергероев и наделяет их сверхспособностями. Они понятия не имеют, что делать с открывшимися перспективами. Более того, никто из них не рад своей новой силе, потому что она раскрывает их самые глубокие комплексы и тайны, которые бы они не хотели выставлять напоказ.",
+      "grade": 1,
+      "rating": 8.1,
+      "genreOfficial": [
+        "драма",
+        "мелодрама",
+        "фантастика",
+        "комедия"
+      ],
+      "genreUser": [
+        {
+          "name": "comedy",
+          "label": "Комедия"
+        }
+      ],
+      "category": "movie",
+      "datePublication": {
+        "date": "07",
+        "mounth": "05",
+        "year": 2022,
+        "minute": 14,
+        "hour": "03",
+        "second": 12
+      },
+      "dateRelease": 2009,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/485542.jpg",
+      "view": "look",
+      "serial": true
     }
   ],
   "genres": [

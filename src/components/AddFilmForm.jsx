@@ -13,7 +13,7 @@ const AddFilmForm = () => {
    const [optionDescr, setOptionDesc] = useState('');
    const [gradeActive, setGradeActive] = useState(1);
    const [categoryActive, setCategoryActive] = useState('movie');
-   const [genreActive, setGenreActive] = useState({ name: 'comedy', label: 'Комедия' });
+   const [genreActive, setGenreActive] = useState([{ name: 'comedy', label: 'Комедия' }]);
    const [apiFilm, setApiFilm] = useState();
    const [apiFilmsArr, setApiFilmsArr] = useState([]);
    const [changeTitle, setChengeTitle] = useState('');
@@ -82,7 +82,6 @@ const AddFilmForm = () => {
          return (
             <li
                key={id}
-               value={name}
                className={`form__category-genre form__button ${genreActive.name === name ? 'active__button' : null}`}
                onClick={() => setGenreActive({ name, label })}>
                {label}
@@ -134,7 +133,8 @@ const AddFilmForm = () => {
          },
          "dateRelease": apiFilm.dateRelease,
          "posterUrl": apiFilm.posterUrl,
-         "view": view
+         "view": view,
+         "serial": apiFilm.serial
       }
       request(`http://localhost:3001/films-view`, 'GET')
          .then(items => {
