@@ -80,7 +80,7 @@ const AddFilmForm = () => {
       setOptionDesc('');
       setGradeActive(1);
       setCategoryActive('movie');
-      setGenreActive({ name: 'comedy', label: 'Комедия' });
+      // setGenreActive({ name: 'comedy', label: 'Комедия' });
       setApiFilmsArr([]);
    }
 
@@ -101,7 +101,7 @@ const AddFilmForm = () => {
          "grade": gradeActive,
          "rating": apiFilm.rating,
          "genreOfficial": apiFilm.genreOfficial,
-         "genreUser": genreActive,
+         // "genreUser": genreActive,
          "category": categoryActive,
          "datePublication": {
             date: addZeroDate(date.getDate()),
