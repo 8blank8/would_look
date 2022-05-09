@@ -7,3 +7,4 @@ export { default as FilmPage } from './pages/FilmPage';
 export { default as FilmListServer } from './FilmListServer';
 export { default as FilmsView } from './FilmsView';
 export { default as SeasonItem } from './SeasonItem';
+export { default as ButtonGenre } from './ButtonGenre';

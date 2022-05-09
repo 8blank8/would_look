@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setFilmPageItem } from "../../redux/actions/film";
 
 // import { FilmListServer } from '../index';
-import { FilmListServer } from '../index';
+import { FilmListServer, ButtonGenre } from '../index';
 import FilmService from "../../services/FilmService";
 
 const AddFilmForm = () => {
@@ -14,7 +14,6 @@ const AddFilmForm = () => {
    const [optionDescr, setOptionDesc] = useState('');
    const [gradeActive, setGradeActive] = useState(1);
    const [categoryActive, setCategoryActive] = useState('movie');
-   const [genreActive, setGenreActive] = useState([{ name: 'comedy', label: 'Комедия' }]);
    const [apiFilm, setApiFilm] = useState();
    const [apiFilmsArr, setApiFilmsArr] = useState([]);
    const [changeTitle, setChengeTitle] = useState('');
@@ -24,7 +23,6 @@ const AddFilmForm = () => {
    const { searchFilms } = FilmService();
 
    const [categoryArr, setCategoryArr] = useState([]);
-   const [genreArr, setGenreArr] = useState([]);
 
    const [openModal, setOpenModal] = useState(false);
    const [modalContent, setModalContent] = useState('');
@@ -32,9 +30,6 @@ const AddFilmForm = () => {
    useEffect(() => {
       request('http://localhost:3001/categoties')
          .then(data => setCategoryArr(data));
-
-      request('http://localhost:3001/genres')
-         .then(data => setGenreArr(data));
    }, [])
 
    useEffect(() => {
@@ -75,22 +70,6 @@ const AddFilmForm = () => {
       return gradeArr;
    }
    const gradeItem = addGradeItem(10);
-
-   // genre
-
-   const addButtonGenre = (arr) => {
-      return arr.map(({ label, id, name }) => {
-         return (
-            <li
-               key={id}
-               className={`form__category-genre form__button ${genreActive.name === name ? 'active__button' : null}`}
-               onClick={() => setGenreActive({ name, label })}>
-               {label}
-            </li>
-         )
-      })
-   }
-   const genreItem = addButtonGenre(genreArr);
 
    //clearForm
 
@@ -226,9 +205,7 @@ const AddFilmForm = () => {
                   {categoryItem}
                </ul>
                <div className="genre">Жанр</div>
-               <ul className="form__genre">
-                  {genreItem}
-               </ul>
+               <ButtonGenre />
                <button
                   className="form__reset"
                   onClick={clearForm}>
