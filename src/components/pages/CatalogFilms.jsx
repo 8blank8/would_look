@@ -1,5 +1,5 @@
 
-import { Filters, FilmsView } from './index';
+import { Filters, FilmsView } from '../index';
 
 const CatalogFilms = () => {
    return (

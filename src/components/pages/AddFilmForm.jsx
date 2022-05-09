@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { useHttp } from '../hooks/useHttp';
+import { useHttp } from '../../hooks/useHttp';
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setFilmPageItem } from "../redux/actions/film";
+import { setFilmPageItem } from "../../redux/actions/film";
 
-import { FilmListServer } from './index';
-import FilmService from "../services/FilmService";
+// import { FilmListServer } from '../index';
+import { FilmListServer } from '../index';
+import FilmService from "../../services/FilmService";
 
 const AddFilmForm = () => {
 

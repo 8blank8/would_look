@@ -2,10 +2,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { deletedFilm } from '../redux/actions/film';
-import { useHttp } from '../hooks/useHttp';
+import { deletedFilm } from '../../redux/actions/film';
+import { useHttp } from '../../hooks/useHttp';
 
-import SeasonItem from './SeasonItem';
+import { SeasonItem } from '../index';
 
 const FilmPage = () => {
    const filmPageItem = useSelector(state => state.filmReducer.filmPageItem);
