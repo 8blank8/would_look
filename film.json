@@ -29,46 +29,82 @@
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/61237.jpg",
       "view": "view",
       "serial": false
+    },
+    {
+      "id": 485542,
+      "title": "Отбросы",
+      "descriptioUser": "",
+      "descriptionOfficial": "Келли, Нейтан, Кертис, Алиша и Саймон выполняют общественные работы за совершение мелких преступлений. Они – не друзья. Более того, у них нет ничего общего. В группе постоянно происходят конфликты, споры и драки. Но в удивительный день во время сильного шторма сильная молния делает из них супергероев и наделяет их сверхспособностями. Они понятия не имеют, что делать с открывшимися перспективами. Более того, никто из них не рад своей новой силе, потому что она раскрывает их самые глубокие комплексы и тайны, которые бы они не хотели выставлять напоказ.",
+      "grade": 1,
+      "rating": 8.1,
+      "genreOfficial": [
+        "драма",
+        "мелодрама",
+        "фантастика",
+        "комедия"
+      ],
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "series",
+      "datePublication": {
+        "date": 11,
+        "mounth": "05",
+        "year": 2022,
+        "minute": "06",
+        "hour": 19,
+        "second": "02"
+      },
+      "dateRelease": 2009,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/485542.jpg",
+      "view": "view",
+      "serial": true
     }
   ],
   "genres": [
     {
       "id": 0,
+      "label": "Все",
+      "name": "all"
+    },
+    {
+      "id": 1,
       "label": "Комедия",
       "name": "comedy"
     },
     {
-      "id": 1,
+      "id": 2,
       "label": "Ужасы",
       "name": "horror"
     },
     {
-      "id": 2,
+      "id": 3,
       "label": "Фантастика",
       "name": "fantastic"
     },
     {
-      "id": 3,
+      "id": 4,
       "label": "Семейный",
       "name": "family"
     },
     {
-      "id": 4,
+      "id": 5,
       "label": "Фентези",
       "name": "fantasy"
     },
     {
-      "id": 5,
+      "id": 6,
       "label": "Приключения",
       "name": "adventures"
     },
     {
-      "id": 6,
+      "id": 7,
       "label": "Триллер",
       "name": "triller"
     },
     {
-      "id": 7,
+      "id": 8,
       "label": "Драма",
       "name": "drama"
     }

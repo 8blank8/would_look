@@ -87,3 +87,17 @@ export const setActiveGenre = (genre) => {
       payload: genre
    }
 }
+
+export const setGenreArr = (arr) => {
+   return {
+      type: 'SET_GENRE_ARR',
+      payload: arr
+   }
+}
+
+export const setCategoryArr = (arr) => {
+   return {
+      type: 'SET_CATEGORY_ARR',
+      payload: arr
+   }
+}

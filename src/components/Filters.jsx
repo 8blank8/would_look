@@ -3,18 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFilmView, setFilterSort, setActiveFilterSort, setActiveFilterCategory, setActiveFilterGenre } from '../redux/actions/filters';
 import { v4 as uuidv4 } from 'uuid';
 
-import { useHttp } from '../hooks/useHttp';
-
 const Filters = () => {
 
    const dispatch = useDispatch();
-   const request = useHttp();
 
    const films = useSelector(({ filmReducer }) => filmReducer.films);
    const filterView = useSelector(state => state.filmReducer.view);
    const activeFilterSort = useSelector(({ filmReducer }) => filmReducer.activeFilterSort);
    const activeFilterCategory = useSelector(({ filmReducer }) => filmReducer.activeFilterCategory);
    const activeFilterGenre = useSelector(({ filmReducer }) => filmReducer.activeFilterGenre);
+   const genreArr = useSelector(({ filmReducer }) => filmReducer.genreArr);
+   const categoryArr = useSelector(({ filmReducer }) => filmReducer.categoryArr);
 
    const [sortArr, setSortArr] = useState([
       { label: "увеличению рейтинга", name: "uprating" },
@@ -22,14 +21,9 @@ const Filters = () => {
       { label: "увеличению оценки", name: "upgrade" },
       { label: "убавлению оценки", name: "downgrade" }
    ]);
-   const [categoryArr, setCategoryArr] = useState([{ "id": 5, "label": "Все", "name": "all" }]);
-   const [genreArr, setGenreArr] = useState([{ "id": 8, "label": "Все", "name": "all" }]);
+
 
    useEffect(() => {
-      request('http://localhost:3001/categoties')
-         .then(data => setCategoryArr([...categoryArr, ...data]));
-      request('http://localhost:3001/genres')
-         .then(data => setGenreArr([...genreArr, ...data]));
       document.body.addEventListener('click', onCloseFilterItem);
    }, []);
 

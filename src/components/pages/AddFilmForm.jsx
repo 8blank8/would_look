@@ -3,6 +3,7 @@ import { useHttp } from '../../hooks/useHttp';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilmPageItem } from "../../redux/actions/film";
+import { setActiveGenre } from "../../redux/actions/filters";
 
 import { FilmListServer, ButtonGenre } from '../index';
 import FilmService from "../../services/FilmService";
@@ -18,20 +19,15 @@ const AddFilmForm = () => {
    const [changeTitle, setChengeTitle] = useState('');
 
    const activeGenre = useSelector(({ filmReducer }) => filmReducer.activeGenre);
+   const categoryArr = useSelector(({ filmReducer }) => filmReducer.categoryArr);
 
    const request = useHttp();
    const dispatch = useDispatch();
    const { searchFilms } = FilmService();
 
-   const [categoryArr, setCategoryArr] = useState([]);
-
    const [openModal, setOpenModal] = useState(false);
    const [modalContent, setModalContent] = useState('');
 
-   useEffect(() => {
-      request('http://localhost:3001/categoties')
-         .then(data => setCategoryArr(data));
-   }, [])
 
    useEffect(() => {
       setApiFilmsArray(titleFilm);
@@ -81,7 +77,7 @@ const AddFilmForm = () => {
       setOptionDesc('');
       setGradeActive(1);
       setCategoryActive('movie');
-      // setGenreActive({ name: 'comedy', label: 'Комедия' });
+      dispatch(setActiveGenre({ name: 'comedy', label: 'Комедия' }));
       setApiFilmsArr([]);
    }
 
