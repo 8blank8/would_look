@@ -33,19 +33,23 @@ const AddFilmForm = () => {
       setApiFilmsArray(titleFilm);
    }, [changeTitle])
 
+
+
    //category
 
    const addButtonCategory = (arr) => {
       return arr.map(({ label, name, id }, i) => {
-         return (
-            <li
-               key={id}
-               value={name}
-               className={`form__category-item form__button ${categoryActive === name ? 'active__button' : null}`}
-               onClick={() => setCategoryActive(name)}>
-               {label}
-            </li>
-         )
+         if (name !== 'all') {
+            return (
+               <li
+                  key={id}
+                  value={name}
+                  className={`form__category-item form__button ${categoryActive === name ? 'active__button' : null}`}
+                  onClick={() => setCategoryActive(name)}>
+                  {label}
+               </li>
+            )
+         }
       })
    }
    const categoryItem = addButtonCategory(categoryArr);
@@ -169,6 +173,7 @@ const AddFilmForm = () => {
          setOpenModal(false);
       }, 4000);
    }
+
 
    return (
       <>

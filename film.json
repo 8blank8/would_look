@@ -60,6 +60,36 @@
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/485542.jpg",
       "view": "view",
       "serial": true
+    },
+    {
+      "id": 1117735,
+      "title": "Элита",
+      "descriptioUser": "",
+      "descriptionOfficial": "Трое подростков из бедных семей попадают в «Лас Энчинас» — самую престижную школу в стране. Обеспеченным деткам не нравятся новички, и начинается безжалостная битва за власть. В ход идут любые средства и методы, даже убийство.",
+      "grade": 7,
+      "rating": 7.6,
+      "genreOfficial": [
+        "триллер",
+        "драма",
+        "криминал"
+      ],
+      "genreUser": {
+        "name": "triller",
+        "label": "Триллер"
+      },
+      "category": "series",
+      "datePublication": {
+        "date": 11,
+        "mounth": "05",
+        "year": 2022,
+        "minute": 13,
+        "hour": 19,
+        "second": 26
+      },
+      "dateRelease": 2018,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1117735.jpg",
+      "view": "view",
+      "serial": true
     }
   ],
   "genres": [
@@ -112,81 +142,33 @@
   "categoties": [
     {
       "id": 0,
+      "label": "Все",
+      "name": "all"
+    },
+    {
+      "id": 1,
       "label": "Сериал",
       "name": "series"
     },
     {
-      "id": 1,
+      "id": 2,
       "label": "Фильм",
       "name": "movie"
     },
     {
-      "id": 2,
+      "id": 3,
       "label": "Мультсериал",
       "name": "animated-series"
     },
     {
-      "id": 3,
+      "id": 4,
       "label": "Мультфильм",
       "name": "cartoon"
     },
     {
-      "id": 4,
+      "id": 5,
       "label": "Аниме",
       "name": "anime"
     }
-  ],
-  "filters": {
-    "sort": [
-      {
-        "id": 0,
-        "label": "увеличению рейтинга",
-        "name": "uprating"
-      },
-      {
-        "id": 1,
-        "label": "убавлению рейтинга",
-        "name": "downrating"
-      },
-      {
-        "id": 2,
-        "label": "сначала старые",
-        "name": "old"
-      },
-      {
-        "id": 3,
-        "label": "сначала новые",
-        "name": "new"
-      },
-      {
-        "id": 4,
-        "label": "алфавиту",
-        "name": "alfavit"
-      },
-      {
-        "id": 5,
-        "label": "увеличению оценки",
-        "name": "upgrade"
-      },
-      {
-        "id": 6,
-        "label": "убавлению оценки",
-        "name": "downgrade"
-      }
-    ],
-    "category": [
-      {
-        "id": 0,
-        "label": "фильмы",
-        "name": "films"
-      }
-    ],
-    "genre": [
-      {
-        "id": 0,
-        "label": "семейный",
-        "name": "family"
-      }
-    ]
-  }
+  ]
 }
