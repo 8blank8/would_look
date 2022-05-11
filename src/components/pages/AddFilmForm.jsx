@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { useHttp } from '../../hooks/useHttp';
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setFilmPageItem } from "../../redux/actions/film";
 
-// import { FilmListServer } from '../index';
 import { FilmListServer, ButtonGenre } from '../index';
 import FilmService from "../../services/FilmService";
 
@@ -17,6 +16,8 @@ const AddFilmForm = () => {
    const [apiFilm, setApiFilm] = useState();
    const [apiFilmsArr, setApiFilmsArr] = useState([]);
    const [changeTitle, setChengeTitle] = useState('');
+
+   const activeGenre = useSelector(({ filmReducer }) => filmReducer.activeGenre);
 
    const request = useHttp();
    const dispatch = useDispatch();
@@ -101,7 +102,7 @@ const AddFilmForm = () => {
          "grade": gradeActive,
          "rating": apiFilm.rating,
          "genreOfficial": apiFilm.genreOfficial,
-         // "genreUser": genreActive,
+         "genreUser": activeGenre,
          "category": categoryActive,
          "datePublication": {
             date: addZeroDate(date.getDate()),

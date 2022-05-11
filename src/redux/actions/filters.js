@@ -80,3 +80,10 @@ export const setActiveFilterGenre = (filter) => {
       payload: filter
    }
 }
+
+export const setActiveGenre = (genre) => {
+   return {
+      type: 'SET_ACTIVE_GENRE',
+      payload: genre
+   }
+}

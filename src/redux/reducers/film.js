@@ -6,7 +6,8 @@ const initialState = {
    view: 'view',
    activeFilterSort: { name: 'downrating', label: 'убавлению рейтинга' },
    activeFilterCategory: { name: 'all', label: 'Все' },
-   activeFilterGenre: { name: 'all', label: 'Все' }
+   activeFilterGenre: { name: 'all', label: 'Все' },
+   activeGenre: { name: 'comedy', label: 'Комедия' }
 }
 
 const filmReducer = (state = initialState, action) => {
@@ -51,7 +52,11 @@ const filmReducer = (state = initialState, action) => {
             ...state,
             films: state.films.filter(item => item.id !== action.payload)
          }
-
+      case 'SET_ACTIVE_GENRE':
+         return {
+            ...state,
+            activeGenre: action.payload
+         }
       default: return state;
    }
 }

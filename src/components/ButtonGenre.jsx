@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
+
 import { useHttp } from '../hooks/useHttp';
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveGenre } from "../redux/actions/filters";
+
 
 const ButtonGenre = () => {
 
-   const [genreActive, setGenreActive] = useState([{ name: 'comedy', label: 'Комедия' }]);
+   const activeGenre = useSelector(({ filmReducer }) => filmReducer.activeGenre);
    const [genreArr, setGenreArr] = useState([]);
 
    const request = useHttp();
+   const dispatch = useDispatch();
 
    useEffect(() => {
       request('http://localhost:3001/genres')
@@ -18,8 +23,8 @@ const ButtonGenre = () => {
          return (
             <li
                key={id}
-               className={`form__category-genre form__button ${genreActive.name === name ? 'active__button' : null}`}
-               onClick={() => setGenreActive({ name, label })}>
+               className={`form__category-genre form__button ${activeGenre.name === name ? 'active__button' : null}`}
+               onClick={() => dispatch(setActiveGenre({ name, label }))}>
                {label}
             </li>
          )
