@@ -1,246 +1,34 @@
 {
   "films-view": [
     {
-      "id": 635,
-      "title": "Побег из курятника",
-      "descriptioUser": "ываываыва",
-      "descriptionOfficial": "Курочкам на ферме миссис Туиди приходится нелегко. Для каждой из этих несчастных птиц любое, даже самое погожее утро, может стать последним: в мгновение ока они могут угодить в суп или стать начинкой для пирожка.\n\nБезропотные домашние птички живут в постоянном страхе в ужасных курятниках, напоминающих бараки концлагеря. Все попытки вырваться из страшной фермы на волю оканчиваются провалом. Но однажды на ферме объявляется веселый американский петух Рокки...",
-      "grade": 5,
-      "rating": "6.9",
-      "genreOfficial": [
-        "драма",
-        "комедия",
-        "мультфильм",
-        "приключения",
-        "семейный"
-      ],
-      "genreUser": {
-        "name": "fantastic",
-        "label": "Фантастика"
-      },
-      "category": "cartoon",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 25,
-        "hour": 13,
-        "second": "09"
-      },
-      "dateRelease": "2000",
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/635.jpg",
-      "view": "view"
-    },
-    {
       "id": 61237,
       "title": "Железный человек",
       "descriptioUser": "",
       "descriptionOfficial": "Миллиардер-изобретатель Тони Старк попадает в плен к Афганским террористам, которые пытаются заставить его создать оружие массового поражения. В тайне от своих захватчиков Старк конструирует высокотехнологичную киберброню, которая помогает  ему сбежать. Однако по возвращении в США он узнаёт, что в совете директоров его фирмы плетётся заговор, чреватый страшными последствиями. Используя своё последнее изобретение, Старк пытается решить проблемы своей компании радикально...",
-      "grade": 1,
-      "rating": "7.9",
-      "genreOfficial": [
-        "боевик",
-        "приключения",
-        "фантастика"
-      ],
-      "genreUser": {
-        "name": "comedy",
-        "label": "Комедия"
-      },
-      "category": "movie",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 29,
-        "hour": 13,
-        "second": 22
-      },
-      "dateRelease": "2008",
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/61237.jpg",
-      "view": "view"
-    },
-    {
-      "descriptioUser": "",
-      "grade": 1,
-      "genreUser": {
-        "name": "comedy",
-        "label": "Комедия"
-      },
-      "category": "movie",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 27,
-        "hour": "02",
-        "second": 50
-      },
-      "view": "view",
-      "id": 571336
-    },
-    {
-      "descriptioUser": "",
-      "grade": 1,
-      "genreUser": {
-        "name": "comedy",
-        "label": "Комедия"
-      },
-      "category": "movie",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 29,
-        "hour": "02",
-        "second": "08"
-      },
-      "view": "view",
-      "id": 571337
-    },
-    {
-      "descriptioUser": "q",
-      "grade": 1,
-      "genreUser": {
-        "name": "comedy",
-        "label": "Комедия"
-      },
-      "category": "movie",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 30,
-        "hour": "02",
-        "second": 36
-      },
-      "view": "view",
-      "id": 571338
-    },
-    {
-      "id": 814016,
-      "title": "Люди Икс: Апокалипсис",
-      "descriptioUser": "",
-      "descriptionOfficial": "События «Дней Минувшего Будущего» оказали колоссальное влияние на мир, где мутанты и люди борются за свое место под Солнцем. В это нелегкое время Людям Икс предстоит столкнуться со своим самым опасным противником - древним мутантом Апокалипсисом, существом, схватка с которым может стать последней не только для мутантов, но и в принципе для всего человечества. В поисках способа победы над неуязвимым и бессмертным монстром Людям Икс предстоит узнать больше о происхождении своего вида. Но Апокалипсис неимоверно силен, и вероятность победы все уменьшается, ведь он твердо убежден, что только сильнейшие имеют право на выживание...",
-      "grade": 1,
-      "rating": 7,
+      "grade": 9,
+      "rating": 7.9,
       "genreOfficial": [
         "фантастика",
         "приключения",
         "боевик"
       ],
       "genreUser": {
-        "name": "comedy",
-        "label": "Комедия"
+        "name": "fantastic",
+        "label": "Фантастика"
       },
       "category": "movie",
       "datePublication": {
-        "date": "07",
+        "date": 11,
         "mounth": "05",
         "year": 2022,
-        "minute": 32,
-        "hour": "02",
-        "second": 56
+        "minute": 36,
+        "hour": 18,
+        "second": 25
       },
-      "dateRelease": 2016,
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/814016.jpg",
-      "view": "view"
-    },
-    {
-      "id": 571335,
-      "title": "Бесстыжие",
-      "descriptioUser": "",
-      "descriptionOfficial": "О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.",
-      "grade": 1,
-      "rating": 8.7,
-      "genreOfficial": [
-        "драма",
-        "комедия"
-      ],
-      "genreUser": [
-        {
-          "name": "comedy",
-          "label": "Комедия"
-        }
-      ],
-      "category": "movie",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 10,
-        "hour": "03",
-        "second": 43
-      },
-      "dateRelease": 2011,
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
-      "view": "look",
-      "serial": true
-    },
-    {
-      "id": 485542,
-      "title": "Отбросы",
-      "descriptioUser": "",
-      "descriptionOfficial": "Келли, Нейтан, Кертис, Алиша и Саймон выполняют общественные работы за совершение мелких преступлений. Они – не друзья. Более того, у них нет ничего общего. В группе постоянно происходят конфликты, споры и драки. Но в удивительный день во время сильного шторма сильная молния делает из них супергероев и наделяет их сверхспособностями. Они понятия не имеют, что делать с открывшимися перспективами. Более того, никто из них не рад своей новой силе, потому что она раскрывает их самые глубокие комплексы и тайны, которые бы они не хотели выставлять напоказ.",
-      "grade": 1,
-      "rating": 8.1,
-      "genreOfficial": [
-        "драма",
-        "мелодрама",
-        "фантастика",
-        "комедия"
-      ],
-      "genreUser": [
-        {
-          "name": "comedy",
-          "label": "Комедия"
-        }
-      ],
-      "category": "movie",
-      "datePublication": {
-        "date": "07",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 14,
-        "hour": "03",
-        "second": 12
-      },
-      "dateRelease": 2009,
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/485542.jpg",
-      "view": "look",
-      "serial": true
-    },
-    {
-      "id": 1117735,
-      "title": "Элита",
-      "descriptioUser": "",
-      "descriptionOfficial": "Трое подростков из бедных семей попадают в «Лас Энчинас» — самую престижную школу в стране. Обеспеченным деткам не нравятся новички, и начинается безжалостная битва за власть. В ход идут любые средства и методы, даже убийство.",
-      "grade": 1,
-      "rating": 7.6,
-      "genreOfficial": [
-        "триллер",
-        "драма",
-        "криминал"
-      ],
-      "genreUser": [
-        {
-          "name": "comedy",
-          "label": "Комедия"
-        }
-      ],
-      "category": "movie",
-      "datePublication": {
-        "date": "08",
-        "mounth": "05",
-        "year": 2022,
-        "minute": 21,
-        "hour": 16,
-        "second": 35
-      },
-      "dateRelease": 2018,
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1117735.jpg",
-      "view": "look",
-      "serial": true
+      "dateRelease": 2008,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/61237.jpg",
+      "view": "view",
+      "serial": false
     }
   ],
   "genres": [
