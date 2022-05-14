@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect } from 'react';
 import { useHttp } from '../hooks/useHttp';
 
-import { setGenreArr, setCategoryArr } from '../redux/actions/filters';
+import { setGenreArr, setCategoryArr, setFilms } from '../redux/actions/filters';
 import { useDispatch } from 'react-redux';
 
 function App() {
@@ -19,6 +19,11 @@ function App() {
 
       request('http://localhost:3001/genres')
          .then(data => dispatch(setGenreArr(data)));
+
+      request('http://localhost:3001/films-view')
+         .then(data => {
+            dispatch(setFilms(data));
+         });
    }, [])
 
    return (

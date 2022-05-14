@@ -90,6 +90,91 @@
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1117735.jpg",
       "view": "view",
       "serial": true
+    },
+    {
+      "id": 1178445,
+      "title": "Эйфория",
+      "descriptioUser": "",
+      "descriptionOfficial": "17-летняя Ру Беннетт возвращается домой после лечения в реабилитационной клинике. Не теряя времени, она опять берется за старые привычки — наркотики и тусовки. Однако появление в городе девушки Джулс становится для Ру знаком надежды.",
+      "grade": 7,
+      "rating": 7.7,
+      "genreOfficial": [
+        "драма"
+      ],
+      "genreUser": {
+        "name": "drama",
+        "label": "Драма"
+      },
+      "category": "series",
+      "datePublication": {
+        "date": 11,
+        "mounth": "05",
+        "year": 2022,
+        "minute": 10,
+        "hour": 20,
+        "second": 37
+      },
+      "dateRelease": 2019,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1178445.jpg",
+      "view": "view",
+      "serial": true
+    },
+    {
+      "id": 571335,
+      "title": "Бесстыжие",
+      "descriptioUser": "",
+      "descriptionOfficial": "О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.",
+      "grade": 9,
+      "rating": 8.7,
+      "genreOfficial": [
+        "драма",
+        "комедия"
+      ],
+      "genreUser": {
+        "name": "comedy",
+        "label": "Комедия"
+      },
+      "category": "series",
+      "datePublication": {
+        "date": 11,
+        "mounth": "05",
+        "year": 2022,
+        "minute": 11,
+        "hour": 20,
+        "second": 27
+      },
+      "dateRelease": 2011,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
+      "view": "view",
+      "serial": true
+    },
+    {
+      "id": 1048602,
+      "title": "Новый Папа",
+      "descriptioUser": "",
+      "descriptionOfficial": "Ленни Белардо впал в кому, так что кардиналам ничего не остаётся, кроме как выбрать нового понтифика, им становится Иоанн Павел III.",
+      "grade": 5,
+      "rating": 7.9,
+      "genreOfficial": [
+        "драма"
+      ],
+      "genreUser": {
+        "name": "drama",
+        "label": "Драма"
+      },
+      "category": "series",
+      "datePublication": {
+        "date": 11,
+        "mounth": "05",
+        "year": 2022,
+        "minute": 12,
+        "hour": 20,
+        "second": "05"
+      },
+      "dateRelease": 2020,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1048602.jpg",
+      "view": "view",
+      "serial": true
     }
   ],
   "genres": [
