@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
-import { setFilmPageItem } from "../redux/actions/film";
-import { useDispatch } from "react-redux";
 
 const Film = ({ film, similar }) => {
    const { id, posterUrl, title, grade } = film;
-   const dispatch = useDispatch();
    return (
-      <div className="film film_cursor" onClick={() => dispatch(setFilmPageItem(film))}>
+      <div className="film film_cursor">
          <Link to={!similar ? `/catalog/view/${id}` : `/similar/${id}`}>
             <div className="film__img">
                <img src={posterUrl} alt={title} />

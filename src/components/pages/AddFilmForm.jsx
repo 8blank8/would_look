@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useHttp } from '../../hooks/useHttp';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilmPageItem } from "../../redux/actions/film";
 import { setActiveGenre } from "../../redux/actions/filters";
 
 import { FilmListServer, ButtonGenre } from '../index';
@@ -123,14 +122,12 @@ const AddFilmForm = () => {
             items.map(item => {
                if (item.id === data.id) {
                   yesFilm = true;
-                  dispatch(setFilmPageItem(item));
                   onShowModal(item, 'уже было добавленно');
                }
             })
             if (!yesFilm) {
                request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
                   .then(clearForm(e))
-                  .then(dispatch(setFilmPageItem(data)))
                   .then(onShowModal(data, 'добавленно'));
             }
          })

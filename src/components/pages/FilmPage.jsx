@@ -1,5 +1,5 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 
 import { deletedFilm } from '../../redux/actions/film';
@@ -9,9 +9,29 @@ import { SeasonItem } from '../index';
 import { Similar } from '../index';
 
 const FilmPage = () => {
-   const filmPageItem = useSelector(state => state.filmReducer.filmPageItem);
+   const request = useHttp();
 
-   // const filmId = useParams();
+   const filmId = useParams();
+
+   const [film, setFilm] = useState(null);
+   useEffect(() => {
+      request(`http://localhost:3001/films-view/${filmId.id}`)
+         .then(data => setFilm(data));
+   }, []);
+
+   const content = film && <View filmPageItem={film} />
+
+   return (
+      <div className="film">
+         {content}
+         <Similar id={filmId.id} />
+      </div >
+   )
+}
+
+const View = ({ filmPageItem }) => {
+   const request = useHttp();
+   const dispatch = useDispatch();
 
    const {
       id,
@@ -31,8 +51,7 @@ const FilmPage = () => {
 
    const { date, mounth, year } = datePublication;
 
-   const request = useHttp();
-   const dispatch = useDispatch();
+
 
    const [modalOpen, setModalOpen] = useState(false);
    const [modalContent, setModalContent] = useState('');
@@ -79,8 +98,9 @@ const FilmPage = () => {
       )
    }
 
+
    return (
-      <div className="film">
+      <>
          <div className="film__block">
             <div className="film__block-left">
                <div className="film__img">
@@ -142,9 +162,8 @@ const FilmPage = () => {
                удалить
             </div>
          </div>
-         <Similar id={id} />
          {modalOpen && modalContent}
-      </div >
+      </>
    )
 }
 

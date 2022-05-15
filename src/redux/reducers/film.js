@@ -2,7 +2,6 @@
 const initialState = {
    films: [],
    filterFilms: [],
-   filmPageItem: [],
    view: 'view',
    activeFilterSort: { name: 'downrating', label: 'убавлению рейтинга' },
    activeFilterCategory: { name: 'all', label: 'Все' },
@@ -10,7 +9,6 @@ const initialState = {
    activeGenre: { name: 'comedy', label: 'Комедия' },
    genreArr: [],
    categoryArr: [],
-   // activeFilmPageId: ''
 }
 
 const filmReducer = (state = initialState, action) => {
@@ -29,11 +27,6 @@ const filmReducer = (state = initialState, action) => {
          return {
             ...state,
             view: action.payload
-         }
-      case 'SET_FILMPAGE_ITEM':
-         return {
-            ...state,
-            filmPageItem: action.payload
          }
       case 'SET_ACTIVE_FILTER_SORT':
          return {
@@ -70,11 +63,7 @@ const filmReducer = (state = initialState, action) => {
             ...state,
             categoryArr: action.payload
          }
-      // case 'SET_ACTIVE_FILMPAGE_ID':
-      //    return {
-      //       ...state,
-      //       activeFilmPageId: action.payload
-      //    }
+
       default: return state;
    }
 }
