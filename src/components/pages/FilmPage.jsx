@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 
 import { deletedFilm } from '../../redux/actions/film';
 import { useHttp } from '../../hooks/useHttp';
@@ -10,6 +10,9 @@ import { Similar } from '../index';
 
 const FilmPage = () => {
    const filmPageItem = useSelector(state => state.filmReducer.filmPageItem);
+
+   // const filmId = useParams();
+
    const {
       id,
       title,

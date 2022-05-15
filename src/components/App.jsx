@@ -7,6 +7,7 @@ import { useHttp } from '../hooks/useHttp';
 
 import { setGenreArr, setCategoryArr, setFilms } from '../redux/actions/filters';
 import { useDispatch } from 'react-redux';
+import SimilarPage from './pages/SimilarPage';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/' element={<AddFilmForm />} />
             <Route path='/catalog/view' element={<CatalogFilms />} />
             <Route path='/catalog/view/:id' element={<FilmPage />} />
+            <Route path='/similar/:id' element={<SimilarPage />} />
          </Routes>
       </div >
    );

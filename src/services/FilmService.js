@@ -40,7 +40,7 @@ const FilmService = () => {
 
    const _transformSimilar = (similar) => {
       return {
-         id: similar.id,
+         id: similar.filmId,
          title: similar.nameRu,
          posterUrl: similar.posterUrl
       }

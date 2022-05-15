@@ -7,7 +7,7 @@ const Film = ({ film, similar }) => {
    const dispatch = useDispatch();
    return (
       <div className="film film_cursor" onClick={() => dispatch(setFilmPageItem(film))}>
-         <Link to={`/catalog/view/${id}`}>
+         <Link to={!similar ? `/catalog/view/${id}` : `/similar/${id}`}>
             <div className="film__img">
                <img src={posterUrl} alt={title} />
             </div>

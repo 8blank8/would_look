@@ -9,7 +9,8 @@ const initialState = {
    activeFilterGenre: { name: 'all', label: 'Все' },
    activeGenre: { name: 'comedy', label: 'Комедия' },
    genreArr: [],
-   categoryArr: []
+   categoryArr: [],
+   // activeFilmPageId: ''
 }
 
 const filmReducer = (state = initialState, action) => {
@@ -69,6 +70,11 @@ const filmReducer = (state = initialState, action) => {
             ...state,
             categoryArr: action.payload
          }
+      // case 'SET_ACTIVE_FILMPAGE_ID':
+      //    return {
+      //       ...state,
+      //       activeFilmPageId: action.payload
+      //    }
       default: return state;
    }
 }

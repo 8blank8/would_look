@@ -12,3 +12,10 @@ export const deletedFilm = (id) => {
       payload: id
    }
 }
+
+// export const setActiveFilmPageId = (id) => {
+//    return {
+//       type: 'SET_ACTIVE_FILMPAGE_ID',
+//       payload: id
+//    }
+// }
