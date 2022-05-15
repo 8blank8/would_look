@@ -768,6 +768,10 @@ body {
   padding: 10px 0px 0px 0px;
 }
 
+.seasons__seria {
+  position: relative;
+}
+
 .seasons__ser {
   border: 2px solid #fff;
   height: 20px;
@@ -776,21 +780,29 @@ body {
   line-height: 20px;
   margin: 0px 10px 0px 0px;
   cursor: pointer;
-  position: relative;
-}
-
-.seasons__ser:hover .seasons__hover {
-  opacity: 1;
 }
 
 .seasons__hover {
-  position: absolute;
-  left: 0;
-  width: 500px;
+  pointer-events: none;
   opacity: 0;
-  z-index: 100;
+  position: absolute;
+  left: 0px;
+  width: 400px;
   background-color: #363636;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   padding: 10px;
+  z-index: 1;
+}
+
+.seasons__hover-title {
+  font-size: 22px;
+}
+
+.seasons__hover-descr {
+  padding: 10px 0px 0px 0px;
+}
+
+.seasons__ser:hover + .seasons__hover {
+  opacity: 1;
 }

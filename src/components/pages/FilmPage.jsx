@@ -6,6 +6,7 @@ import { deletedFilm } from '../../redux/actions/film';
 import { useHttp } from '../../hooks/useHttp';
 
 import { SeasonItem } from '../index';
+import { Similar } from '../index';
 
 const FilmPage = () => {
    const filmPageItem = useSelector(state => state.filmReducer.filmPageItem);
@@ -138,6 +139,7 @@ const FilmPage = () => {
                удалить
             </div>
          </div>
+         <Similar id={id} />
          {modalOpen && modalContent}
       </div >
    )

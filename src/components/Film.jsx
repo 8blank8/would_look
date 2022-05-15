@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { setFilmPageItem } from "../redux/actions/film";
 import { useDispatch } from "react-redux";
 
-const Film = ({ film }) => {
+const Film = ({ film, similar }) => {
    const { id, posterUrl, title, grade } = film;
    const dispatch = useDispatch();
    return (
@@ -15,9 +15,9 @@ const Film = ({ film }) => {
                <div className="film__title">
                   {title}
                </div>
-               <div className="film__rating">
+               {!similar && <div className="film__rating">
                   Оценка: {grade}
-               </div>
+               </div>}
             </div>
          </Link>
       </div>

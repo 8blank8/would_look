@@ -30,6 +30,21 @@ const FilmService = () => {
       return _transformSeasons(res);
    }
 
+   const getSimilarsId = async (id) => {
+      let res = await request(`${_apiBase}v2.2/films/${id}/similars`, 'GET', null, {
+         'X-API-KEY': _apiKey,
+         'Content-Type': 'application/json'
+      });
+      return res.items.map(_transformSimilar);
+   }
+
+   const _transformSimilar = (similar) => {
+      return {
+         id: similar.id,
+         title: similar.nameRu,
+         posterUrl: similar.posterUrl
+      }
+   }
 
    const _transformSearchFilms = (film) => {
       return {
@@ -72,7 +87,7 @@ const FilmService = () => {
       }
    }
 
-   return { searchFilms, getFilmId, getSerialSeasons };
+   return { searchFilms, getFilmId, getSerialSeasons, getSimilarsId };
 }
 
 export default FilmService;
