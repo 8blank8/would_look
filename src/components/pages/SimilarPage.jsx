@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+import { setApiFilm } from "../../redux/actions/film";
+
 import FilmService from '../../services/FilmService';
 
 import { SeasonItem } from '../index';
@@ -10,7 +14,6 @@ const SimilarPage = () => {
    const [film, setFilm] = useState(null);
 
    const id = useParams();
-
    const { getFilmId } = FilmService();
 
    useEffect(() => {
@@ -27,6 +30,8 @@ const SimilarPage = () => {
    )
 }
 
+
+
 const View = ({ film }) => {
    const {
       posterUrl,
@@ -38,6 +43,14 @@ const View = ({ film }) => {
       id,
       serial
    } = film;
+
+   const dispatch = useDispatch();
+
+
+   const onAddFilm = () => {
+      dispatch(setApiFilm(film))
+   }
+
    return (
       <div className="film">
          <div className="film__block">
@@ -70,9 +83,11 @@ const View = ({ film }) => {
          </div>
          <div className="film__buttons">
             <div></div>
-            <div className="film__button">
-               Добавить фильм
-            </div>
+            <NavLink to='/'>
+               <div className="film__button" onClick={onAddFilm}>
+                  Добавить фильм
+               </div>
+            </NavLink>
          </div>
          Похожие фильмы:
          <Similar id={id} />

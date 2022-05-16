@@ -339,6 +339,34 @@
       "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1045172.jpg",
       "view": "view",
       "serial": true
+    },
+    {
+      "id": 986788,
+      "title": "Наследники",
+      "descriptioUser": "",
+      "descriptionOfficial": "Логан Рой — влиятельный пожилой глава международного медийного конгломерата Waystar Royco. В будущем правление компанией должен принять старший сын, но прежде всей семье придется пережить интриги, предательство и неприкрытую борьбу за власть.",
+      "grade": 7,
+      "rating": 8,
+      "genreOfficial": [
+        "драма"
+      ],
+      "genreUser": {
+        "name": "horror",
+        "label": "Ужасы"
+      },
+      "category": "movie",
+      "datePublication": {
+        "date": 16,
+        "mounth": "05",
+        "year": 2022,
+        "minute": 22,
+        "hour": 21,
+        "second": 46
+      },
+      "dateRelease": 2018,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/986788.jpg",
+      "view": "look",
+      "serial": true
     }
   ],
   "genres": [
