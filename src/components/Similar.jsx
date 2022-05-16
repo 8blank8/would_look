@@ -13,6 +13,9 @@ const Similar = ({ id }) => {
       getSimilarsId(id).then(data => setSimilarFilms(data));
    }, [id]);
 
+
+
+
    return (
       <div className="similar">
          <div className="similar__wrapper">
