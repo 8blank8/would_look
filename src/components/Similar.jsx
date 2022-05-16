@@ -11,7 +11,7 @@ const Similar = ({ id }) => {
 
    useEffect(() => {
       getSimilarsId(id).then(data => setSimilarFilms(data));
-   }, []);
+   }, [id]);
 
    return (
       <div className="similar">

@@ -8,7 +8,7 @@ const SeasonItem = ({ id }) => {
 
    useEffect(() => {
       getSerialSeasons(id).then(data => setSeason(data));
-   }, []);
+   }, [id]);
 
    return (
       <div className="seasons">

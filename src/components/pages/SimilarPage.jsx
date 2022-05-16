@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FilmService from '../../services/FilmService';
 
+import { SeasonItem } from '../index';
+import { Similar } from '../index';
+
 const SimilarPage = () => {
 
    const [film, setFilm] = useState(null);
@@ -13,7 +16,7 @@ const SimilarPage = () => {
    useEffect(() => {
       getFilmId(id.id)
          .then(data => setFilm(data));
-   }, []);
+   }, [id.id]);
 
    const content = film && <View film={film} />
 
@@ -31,7 +34,9 @@ const View = ({ film }) => {
       descriptionOfficial,
       rating,
       genreOfficial,
-      dateRelease
+      dateRelease,
+      id,
+      serial
    } = film;
    return (
       <div className="film">
@@ -60,7 +65,7 @@ const View = ({ film }) => {
                <div className="film__date">
                   Год выпуска: {dateRelease}
                </div>
-               {/* {serial && <SeasonItem id={id} />} */}
+               {serial && <SeasonItem id={id} />}
             </div>
          </div>
          {/* <div className="film__buttons">
@@ -81,7 +86,7 @@ const View = ({ film }) => {
                удалить
             </div>
          </div> */}
-         {/* <Similar id={id} /> */}
+         <Similar id={id} />
       </div >
    )
 }
