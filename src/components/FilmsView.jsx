@@ -16,7 +16,7 @@ const FilmsView = () => {
 
    useEffect(() => {
       dispatch(setFilterSort(activeFilterSort.name, activeFilterCategory.name, activeFilterGenre.name, view, films));
-   }, [])
+   }, [films])
 
    const setVisibleContent = (arr) => {
       return arr.map(({ ...film }) => {

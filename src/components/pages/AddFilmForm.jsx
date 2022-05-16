@@ -3,6 +3,7 @@ import { useHttp } from '../../hooks/useHttp';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setActiveGenre } from "../../redux/actions/filters";
+import { addFilm } from "../../redux/actions/film";
 
 import { FilmListServer, ButtonGenre } from '../index';
 import FilmService from "../../services/FilmService";
@@ -13,12 +14,13 @@ const AddFilmForm = () => {
    const [optionDescr, setOptionDesc] = useState('');
    const [gradeActive, setGradeActive] = useState(1);
    const [categoryActive, setCategoryActive] = useState('movie');
-   const [apiFilm, setApiFilm] = useState();
+   // const [apiFilm, setApiFilm] = useState();
    const [apiFilmsArr, setApiFilmsArr] = useState([]);
    const [changeTitle, setChengeTitle] = useState('');
 
    const activeGenre = useSelector(({ filmReducer }) => filmReducer.activeGenre);
    const categoryArr = useSelector(({ filmReducer }) => filmReducer.categoryArr);
+   const apiFilm = useSelector(({ filmReducer }) => filmReducer.apiFilm);
 
    const request = useHttp();
    const dispatch = useDispatch();
@@ -30,9 +32,11 @@ const AddFilmForm = () => {
 
    useEffect(() => {
       setApiFilmsArray(titleFilm);
-   }, [changeTitle])
+   }, [changeTitle]);
 
-
+   useEffect(() => {
+      setTitleFilm(apiFilm.title);
+   }, [apiFilm.title]);
 
    //category
 
@@ -128,6 +132,7 @@ const AddFilmForm = () => {
             if (!yesFilm) {
                request(`http://localhost:3001/films-view`, 'POST', JSON.stringify(data))
                   .then(clearForm(e))
+                  .then(dispatch(addFilm(data)))
                   .then(onShowModal(data, 'добавленно'));
             }
          })
@@ -186,7 +191,7 @@ const AddFilmForm = () => {
                         setTitleFilm(e.target.value);
                         setChengeTitle(e.target.value);
                      }} />
-                  <FilmListServer setApiFilm={setApiFilm} apiFilmsArray={apiFilmsArr} setTitleFilm={setTitleFilm} />
+                  <FilmListServer apiFilmsArray={apiFilmsArr} />
                </div>
                <textarea
                   className="form__textarea"

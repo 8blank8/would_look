@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react"
 import FilmService from "../services/FilmService";
 
-const FilmListServer = ({ setApiFilm, apiFilmsArray, setTitleFilm }) => {
+import { useDispatch } from "react-redux";
+import { setApiFilm } from "../redux/actions/film";
+
+const FilmListServer = ({ apiFilmsArray }) => {
+
+   const dispatch = useDispatch();
 
    const [visibleList, setVisibleList] = useState(false);
 
@@ -18,9 +23,8 @@ const FilmListServer = ({ setApiFilm, apiFilmsArray, setTitleFilm }) => {
          return (
             <li
                onClick={() => {
-                  getFilmId(id).then(data => setApiFilm(data));
+                  getFilmId(id).then(data => dispatch(setApiFilm(data)));
                   setVisibleList(false);
-                  setTitleFilm(title);
                }}
                key={id}
                className="list__item">

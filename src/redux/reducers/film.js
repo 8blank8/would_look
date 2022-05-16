@@ -2,6 +2,7 @@
 const initialState = {
    films: [],
    filterFilms: [],
+   apiFilm: {},
    view: 'view',
    activeFilterSort: { name: 'downrating', label: 'убавлению рейтинга' },
    activeFilterCategory: { name: 'all', label: 'Все' },
@@ -17,6 +18,11 @@ const filmReducer = (state = initialState, action) => {
          return {
             ...state,
             films: action.payload
+         }
+      case 'ADD_FILM':
+         return {
+            ...state,
+            films: [...state.films, action.payload]
          }
       case 'SET_FILTER_FILMS':
          return {
@@ -63,7 +69,11 @@ const filmReducer = (state = initialState, action) => {
             ...state,
             categoryArr: action.payload
          }
-
+      case 'SET_APIFILM':
+         return {
+            ...state,
+            apiFilm: action.payload
+         }
       default: return state;
    }
 }
