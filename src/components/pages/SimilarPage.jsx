@@ -68,24 +68,13 @@ const View = ({ film }) => {
                {serial && <SeasonItem id={id} />}
             </div>
          </div>
-         {/* <div className="film__buttons">
-            <div
-               className="film__button"
-               onClick={() => {
-                  setModalOpen(true);
-                  view === 'look' ? setModalContent(onShowModal(`переместить ${title} в просмотренное?`, onAddView)) : setModalContent(onShowModal(`переместить ${title} в посмотреть?`, onAddLook))
-               }}>
-               {view === 'look' ? 'Переместить в просмотренное' : 'Переместить в посмотреть'}
+         <div className="film__buttons">
+            <div></div>
+            <div className="film__button">
+               Добавить фильм
             </div>
-            <div
-               className="film__button"
-               onClick={() => {
-                  setModalOpen(true);
-                  setModalContent(onShowModal(`удалить ${title}?`, onDeletedFilm));
-               }}>
-               удалить
-            </div>
-         </div> */}
+         </div>
+         Похожие фильмы:
          <Similar id={id} />
       </div >
    )
