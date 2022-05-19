@@ -2,50 +2,46 @@
   padding: 30px 0px 0px 0px;
 }
 
-.seasons__number {
-  padding: 20px 0px 0px 0px;
-}
-
-.seasons__series {
+.seasons__season-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 0px 0px 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 837px;
+  border-bottom: 1px solid #202020;
+  padding: 0px 0px 20px 0px;
 }
 
-.seasons__seria {
-  position: relative;
+.seasons__number {
+  padding: 20px 29px 0px 0px;
 }
 
-.seasons__ser {
-  border: 2px solid #fff;
-  height: 20px;
-  width: 40px;
-  text-align: center;
-  line-height: 20px;
-  margin: 0px 10px 0px 0px;
+.seasons__number span {
   cursor: pointer;
 }
 
-.seasons__hover {
-  pointer-events: none;
-  opacity: 0;
-  position: absolute;
-  left: 0px;
-  width: 400px;
-  background-color: #363636;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  padding: 10px;
-  z-index: 1;
+.seasons__seria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-bottom: 1px solid #202020;
+  padding: 0px 0px 20px 0px;
 }
 
-.seasons__hover-title {
-  font-size: 22px;
+.seasons__seria div {
+  padding: 20px 29px 0px 0px;
+  cursor: pointer;
 }
 
-.seasons__hover-descr {
-  padding: 10px 0px 0px 0px;
+.seasons__descr-wrapper {
+  padding: 20px 0px 0px 0px;
+}
+
+.seasons__descr-wrapper p {
+  padding: 0px 0px 20px 0px;
 }
 
 .seasons__ser:hover + .seasons__hover {

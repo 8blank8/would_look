@@ -759,6 +759,9 @@ body {
 
 .seasons__number {
   padding: 20px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .seasons__series {
@@ -805,4 +808,13 @@ body {
 
 .seasons__ser:hover + .seasons__hover {
   opacity: 1;
+}
+
+.similar__wrapper {
+  width: 1140px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

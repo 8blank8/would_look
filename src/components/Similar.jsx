@@ -19,7 +19,7 @@ const Similar = ({ id }) => {
    return (
       <div className="similar">
          <div className="similar__wrapper">
-            {similarFilms.map(film => <Film id={film.id} film={film} similar />)}
+            {similarFilms.map(film => <Film key={film.id} id={film.id} film={film} similar />)}
          </div>
       </div>
    )
